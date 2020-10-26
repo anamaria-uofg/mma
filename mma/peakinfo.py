@@ -75,6 +75,7 @@ class Adduct:
 
 
     def find_pairs(self, spec1,spec2,tol,shift=0):
+        #from Simon's molnet code
         matching_pairs = []
         spec2lowpos = 0
         spec2length = len(spec2)
@@ -93,6 +94,7 @@ class Adduct:
         return matching_pairs
 
     def fast_cosine(self, spectrum1,spectrum2,tol,min_match):
+        #from Simon's molnet code
         # spec 1 and spec 2 have to be sorted by mz
         if spectrum1.n_peaks == 0 or spectrum2.n_peaks == 0:
             return 0.0,[]
@@ -281,11 +283,10 @@ class PeakInfo:
                 {self.adducts} \n
                 {self.best_ms2_match_adduct}""".format(self = self)
 
-    def get_peak_by_id(self, cid):
-        return self
 
 
 
+#make a peakinfolist class
 def get_peak_by_cid(peakinfolist, cid):
     for peak in peakinfolist:
         if peak.cid == cid:
