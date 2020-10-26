@@ -13,7 +13,7 @@ class Adduct:
         else:
             self.score, self.ms2spec = 0, ''
 
-    def get_hmdb(self, metabolites_dict, tolerance = 0.1):
+    def get_hmdb(self, metabolites_dict, tolerance = 0.3):
 
         for metabolite in metabolites_dict:
 
@@ -177,20 +177,23 @@ class AdductList:
 
 class PeakInfo:
 
-    def __init__(self, cid, mz, rt, aligner_gp, metabolites_dict, ms2_files):
+    def __init__(self, cid, mz, rt):
         self.cid = cid
         self.mz = mz
         self.rt = rt
         self.pval = 0.0
         self.tval = 0.0
+        self.logfc = 0.0
         self.mm_annotation = ''
         self.mm_pathway = ''
         self.mm_kegg_id = ''
         self.std_annotation = ''
         self.std_kegg_id = ''
-        self.spectra = self.get_ms2_spectra(aligner_gp)
-        self.adducts = AdductList(self.mz, self.spectra, metabolites_dict, ms2_files)
-        self.best_ms2_match_adduct = self.adducts.get_adduct_with_best_score()
+        self.spectra = ''
+        self.adducts = ''
+        self.best_ms2_match_adduct = ''
+        self.ms2_annotation = ''
+        self.ms2_kegg_id = ''
 
     def add_pval(self, pval):
         self.pval = pval
@@ -198,21 +201,28 @@ class PeakInfo:
     def add_tval(self, tval):
         self.tval = tval
 
-    def add_mm_info(self, annotation, pathway, kegg_id):
+    def add_logfc(self, logfc):
+        self.logfc = logfc
+
+    def add_mm_annotation(self, annotation):
         self.mm_annotation = annotation
+    def add_mm_pathway(self, pathway):
         self.mm_pathway = pathway
+    def add_mm_kegg_id(self, kegg_id):
         self.mm_kegg_id = kegg_id
 
-    def add_std_match(self, standard, metabolites_dict):
-        self.std_annotation = standard
+    def add_std_match(self, standards_dict, metabolites_dict, ppm = 0.1, ppm_rt = 60):
+
+        for key in standards_dict.keys():
+            if self.mz >= key-ppm and self.mz <= key + ppm:
+                if self.rt*60 >= standards_dict[key][1]-ppm_rt and self.rt*60 <= standards_dict[key][1]+ppm_rt:
+                    self.std_annotation = standards_dict[key][0]
 
         for metabolite in metabolites_dict:
             if str(self.std_annotation).strip() == str(metabolites_dict[metabolite][2]).lower().strip():
                 self.std_kegg_id = metabolites_dict[metabolite][5]
 
-
-    def get_ms2_spectra(self, aligner_gp):
-        #assign the available peak ms2 spectra to the peak
+    def add_spectra(self, aligner_gp):
         new_peakid = self.cid - 1
         num_peaks = aligner_gp.peaksets[new_peakid].n_peaks
         spectra = {}
@@ -221,7 +231,45 @@ class PeakInfo:
                     source = aligner_gp.peaksets[new_peakid].peaks[i+1].source_file
                     msms = aligner_gp.peaksets[new_peakid].peaks[i+1].ms2_spectrum
                     spectra[source] = msms
-        return spectra
+
+        self.spectra = spectra
+
+    def add_adducts(self, metabolites_dict, ms2_files):
+        self.adducts = AdductList(self.mz, self.spectra, metabolites_dict, ms2_files)
+        self.best_ms2_match_adduct = self.adducts.get_adduct_with_best_score()
+
+    def add_ms2_match(self, metabolites_dict, score_theshold = 0.3):
+        if self.best_ms2_match_adduct:
+            if self.best_ms2_match_adduct.score > score_theshold:
+                self.ms2_annotation = metabolites_dict[self.best_ms2_match_adduct.hmdb][2]
+                self.ms2_kegg_id = metabolites_dict[self.best_ms2_match_adduct.hmdb][5]
+
+    def get_possible_kegg_ids(self):
+        kegg_ids = []
+        if self.mm_kegg_id != '':
+            kegg_list = self.mm_kegg_id.split(';')
+            for i in kegg_list:
+                kegg_ids.append(i)
+
+        if self.std_kegg_id != '':
+            kegg_ids.append(self.std_kegg_id)
+
+        if self.ms2_kegg_id != '':
+            kegg_ids.append(self.ms2_kegg_id)
+
+        return kegg_ids
+
+    def plot_boxplots(self, data, order = ['controlVL','infectedVL','controlMalaria', 'infectedMalaria', 'controlZika','infectedZika']):
+        import seaborn as sns
+        import matplotlib.pyplot as plt
+        plt.figure(figsize=(10,5))
+
+        ax = sns.boxplot(y=data[str(self.cid)], x='ConditionDataset', data = data, order = order, palette = 'Set2' )
+        ax = sns.swarmplot(y=data[str(self.cid)], x='ConditionDataset', data = data, order = order, color="black")
+
+        plt.ylabel("Intensity (log2)")
+        plt.title(self.mz)
+        plt.show()
 
     def __str__(self):
         return """peak {self.cid}: {self.mz}, {self.rt} \n
@@ -235,3 +283,10 @@ class PeakInfo:
 
     def get_peak_by_id(self, cid):
         return self
+
+
+
+def get_peak_by_cid(peakinfolist, cid):
+    for peak in peakinfolist:
+        if peak.cid == cid:
+            return peak
