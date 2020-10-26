@@ -1,0 +1,111 @@
+CPD_ID	CPD_NAME	mz_row_Statistic	From_mz_row	From_EmpiricalCompound
+C02759		-4.44827357059876	row285	E187
+CE2576		-7.33604130364207	row75	E123
+C00964	(-)-trans-Carveol	-4.44827357059876	row285	E187
+CE2576		-3.5611747414211696	row426	E125
+C00964	(-)-trans-Carveol	-6.830639123274669	row103	E187
+C14762	13(S)-HODE; (13S)-Hydroxyoctadecadienoic acid; (9Z, 11E)-(13S)-13-Hydroxyoctadeca-9,11-dienoic acid	-4.90844694248797	row233	E203
+CE2577		-8.52009976032923	row37	E26
+CE2577		-7.30159309679049	row77	E26
+CE6506		-7.16338740421072	row82	E108
+C14827	9(S)-HPODE; 9(S)-HPOD; (10E,12Z)-(9S)-9-Hydroperoxyoctadeca-10,12-dienoic acid	-5.58252599471907	row177	E110
+C14827	9(S)-HPODE; 9(S)-HPOD; (10E,12Z)-(9S)-9-Hydroperoxyoctadeca-10,12-dienoic acid	-6.54446369756743	row123	E110
+C08261		-6.98162405467015	row89	E92
+C04717	(9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoic acid; (9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoate; 13(S)-HPODE; 13S-Hydroperoxy-9Z,11E-octadecadienoic acid	-7.3615490394919005	row74	E110
+CE6506		-7.137797312162711	row84	E108
+C00249	Hexadecanoate (n-C16:0)	-3.16331517544918	row523	E404
+CE2006		-7.16338740421072	row82	E108
+CE2061		-8.916326652781411	row31	E19
+C00712	(9Z)-Octadecenoic acid; (Z)-Octadec-9-enoic acid; Oleate; Oleic acid	-5.35869303876806	row191	E266
+C11409	(+)-trans-Carveol; (4S,6R)-trans-Carveol	-6.830639123274669	row103	E187
+CE2576		-7.30159309679049	row77	E123
+C06078		-6.03082836622778	row154	E114
+CE2576		4.14800410820867	row325	E123
+C00246	Butanoic acid; Butanoate; Butyrate; Butyric acid	4.89233027155241	row238	E293
+C00521	(-)-Limonene; (-)-(S)-Limonene; (-)-(4S)-Limonene	-7.68646846245992	row59	E114
+C06099	(+)-Limonene; (+)-(R)-Limonene; (+)-(4R)-Limonene	-7.68646846245992	row59	E114
+C02075	Retinyl ester; all-trans-Retinyl ester	-10.3868590812327	row18	E6
+C02759		-6.830639123274669	row103	E187
+CE2577		-7.33604130364207	row75	E26
+C01601		-4.65345402602353	row261	E86
+CE6506		-2.76945135841356	row648	E108
+CE2577		-3.5611747414211696	row426	E27
+C01601		-7.97115773421293	row50	E86
+C06428	(5Z,8Z,11Z,14Z,17Z)-Icosapentaenoic acid; (5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoic acid; Eicosapentaenoic acid; 5,8,11,14,17-Icosapentaenoic acid; (5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoate	-10.3868590812327	row18	E6
+C14826	12(13)-EpOME; (12R,13S)-(9Z)-12,13-Epoxyoctadecenoic acid	-5.58252599471907	row177	E203
+CE2006		-7.137797312162711	row84	E108
+C06423	Octanoic acid; Caprylic acid; Octylic acid	5.141244727453469	row207	E28
+C06099	(+)-Limonene; (+)-(R)-Limonene; (+)-(4R)-Limonene	-6.03082836622778	row154	E114
+CE2577		-6.1693023834569	row145	E26
+C00249	Hexadecanoate (n-C16:0)	-4.165031130595	row321	E404
+C02679	Dodecanoate (n-C12:0)	-5.60153632481076	row175	E104
+C06423	Octanoic acid; Caprylic acid; Octylic acid	-7.30159309679049	row77	E28
+CE2006		-5.660959617467	row170	E108
+C14825	9(10)-EpOME; (9R,10S)-(12Z)-9,10-Epoxyoctadecenoic acid	-4.90844694248797	row233	E203
+C14825	9(10)-EpOME; (9R,10S)-(12Z)-9,10-Epoxyoctadecenoic acid	-5.58252599471907	row177	E203
+CE2061		-6.830639123274669	row103	E19
+C01601		-8.06411633848234	row48	E86
+CE5527		-7.3615490394919005	row74	E25
+CE5013		-10.3868590812327	row18	E6
+C06306		-7.68646846245992	row59	E114
+CE5526		-8.58443773784317	row36	E25
+C08261		-7.43385964883459	row70	E92
+C00249	Hexadecanoate (n-C16:0)	-3.4706236616903103	row449	E404
+CE2006		-2.76945135841356	row648	E108
+CE2577		-5.71643234221177	row167	E27
+C02452	Perillyl alcohol; (-)-Perillyl alcohol; p-Mentha-1,8-dien-7-ol; (-)-Perillylalcohol	-5.79159994549033	row163	E187
+CE2006		4.89754637009101	row236	E108
+CE2061		-7.97115773421293	row50	E19
+CE2061		-6.55205821559776	row122	E19
+C06424	tetradecanoate (n-C14:0)	-2.89996160417045	row613	E443
+CE6506		-7.70682721267684	row56	E108
+CE6506		4.89754637009101	row236	E108
+CE6506		-5.660959617467	row170	E108
+C14827	9(S)-HPODE; 9(S)-HPOD; (10E,12Z)-(9S)-9-Hydroperoxyoctadeca-10,12-dienoic acid	-7.70682721267684	row56	E110
+C04717	(9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoic acid; (9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoate; 13(S)-HPODE; 13S-Hydroperoxy-9Z,11E-octadecadienoic acid	-7.70682721267684	row56	E110
+C00521	(-)-Limonene; (-)-(S)-Limonene; (-)-(4S)-Limonene	-6.03082836622778	row154	E114
+CE2577		-7.56878226521724	row62	E26
+CE2006		-7.70682721267684	row56	E108
+C06423	Octanoic acid; Caprylic acid; Octylic acid	-3.14376178295315	row529	E30
+C14765	13-OxoODE; 13-KODE; (9Z,11E)-13-Oxooctadeca-9,11-dienoic acid	-7.3615490394919005	row74	E25
+C06423	Octanoic acid; Caprylic acid; Octylic acid	-3.5611747414211696	row426	E30
+C14825	9(10)-EpOME; (9R,10S)-(12Z)-9,10-Epoxyoctadecenoic acid	-6.30884269661641	row135	E203
+C06306		-6.03082836622778	row154	E114
+CE5526		-7.3615490394919005	row74	E25
+CE6506		-3.3685832250883596	row475	E109
+CE2577		-7.16338740421072	row82	E26
+C01595	linoleic acid (all cis C18:2) n-6	-4.90844694248797	row233	E91
+C02759		-5.79159994549033	row163	E187
+CE2061		-8.06411633848234	row48	E19
+C14762	13(S)-HODE; (13S)-Hydroxyoctadecadienoic acid; (9Z, 11E)-(13S)-13-Hydroxyoctadeca-9,11-dienoic acid	-5.58252599471907	row177	E203
+C00964	(-)-trans-Carveol	-5.79159994549033	row163	E187
+CE2006		-3.3685832250883596	row475	E109
+CE5527		-8.58443773784317	row36	E25
+C06423	Octanoic acid; Caprylic acid; Octylic acid	-5.71643234221177	row167	E30
+CE2061		-7.373145037015081	row73	E19
+CE2577		4.89754637009101	row236	E26
+C01530	octadecanoate (n-C18:0)	-8.32323164319308	row43	E73
+C06423	Octanoic acid; Caprylic acid; Octylic acid	-8.52009976032923	row37	E28
+C04717	(9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoic acid; (9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoate; 13(S)-HPODE; 13S-Hydroperoxy-9Z,11E-octadecadienoic acid	-6.54446369756743	row123	E110
+C06424	tetradecanoate (n-C14:0)	-3.7395000936914404	row392	E443
+C11409	(+)-trans-Carveol; (4S,6R)-trans-Carveol	-5.79159994549033	row163	E187
+C14765	13-OxoODE; 13-KODE; (9Z,11E)-13-Oxooctadeca-9,11-dienoic acid	-8.58443773784317	row36	E25
+C14762	13(S)-HODE; (13S)-Hydroxyoctadecadienoic acid; (9Z, 11E)-(13S)-13-Hydroxyoctadeca-9,11-dienoic acid	-6.30884269661641	row135	E203
+C06078		-7.68646846245992	row59	E114
+C02452	Perillyl alcohol; (-)-Perillyl alcohol; p-Mentha-1,8-dien-7-ol; (-)-Perillylalcohol	-4.44827357059876	row285	E187
+C02576	Perillyl aldehyde; Perillaldehyde	-8.916326652781411	row31	E18
+C11409	(+)-trans-Carveol; (4S,6R)-trans-Carveol	-4.44827357059876	row285	E187
+C02452	Perillyl alcohol; (-)-Perillyl alcohol; p-Mentha-1,8-dien-7-ol; (-)-Perillylalcohol	-6.830639123274669	row103	E187
+CE2576		-3.14376178295315	row529	E125
+C02679	Dodecanoate (n-C12:0)	-7.734834165903571	row55	E104
+C14826	12(13)-EpOME; (12R,13S)-(9Z)-12,13-Epoxyoctadecenoic acid	-6.30884269661641	row135	E203
+C14826	12(13)-EpOME; (12R,13S)-(9Z)-12,13-Epoxyoctadecenoic acid	-4.90844694248797	row233	E203
+CE2576		-7.56878226521724	row62	E123
+C14827	9(S)-HPODE; 9(S)-HPOD; (10E,12Z)-(9S)-9-Hydroperoxyoctadeca-10,12-dienoic acid	-7.3615490394919005	row74	E110
+C01595	linoleic acid (all cis C18:2) n-6	-7.97115773421293	row50	E91
+C02576	Perillyl aldehyde; Perillaldehyde	-8.06411633848234	row48	E18
+C08261		-7.87385945847608	row51	E92
+C02679	Dodecanoate (n-C12:0)	4.14800410820867	row325	E104
+C02576	Perillyl aldehyde; Perillaldehyde	-7.373145037015081	row73	E18
+CE5932	13,14-epoxy-retinol	-10.3868590812327	row18	E6
+C04717	(9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoic acid; (9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoate; 13(S)-HPODE; 13S-Hydroperoxy-9Z,11E-octadecadienoic acid	-5.58252599471907	row177	E110

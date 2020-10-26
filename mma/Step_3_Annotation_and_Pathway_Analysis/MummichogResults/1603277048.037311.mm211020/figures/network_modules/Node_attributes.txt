@@ -1,0 +1,116 @@
+CPD_ID	CPD_NAME	mz_row_Statistic	From_mz_row	From_EmpiricalCompound
+tmndnccrn	Timnodonyl carnitine	-4.582130833247191	row62	E81
+C00159	D-Mannose	3.34901216576473	row129	E150
+C04282	1-Pyrroline-4-hydroxy-2-carboxylate	-4.64182382230172	row61	E42
+C04282	1-Pyrroline-4-hydroxy-2-carboxylate	-3.7866608839346405	row98	E44
+C05522	Cytosine (in DNA)	6.335712682568799	row18	E45
+C00380	Cytosine	6.335712682568799	row18	E45
+C00137	myo-Inositol	3.34901216576473	row129	E150
+CE2122	methyl indole-3-acetate	-3.28470920829431	row134	E161
+C00025	L-Glutamate	3.0366353011857097	row155	E48
+C00525	D-Tryptophan	-2.4880123979537903	row205	E221
+C05100	3-Ureidoisobutyrate	-6.4428804590589	row15	E11
+C00819	D-Glutamine; D-2-Aminoglutaramic acid	-3.92476039813466	row93	E7
+C05647	Formyl-5-hydroxykynurenamine	4.07637391147651	row82	E103
+C04282	1-Pyrroline-4-hydroxy-2-carboxylate	-6.253689982318339	row20	E44
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	-6.253689982318339	row20	E50
+lnlccrn	Linoleyl carnitine	-3.1558414124983103	row146	E169
+C01582	Galactose	3.34901216576473	row129	E150
+C00153	Nicotinamide	-3.3409093098550295	row131	E156
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	-4.64182382230172	row61	E47
+C00221	beta-D-Glucose	3.34901216576473	row129	E150
+C00031	D-Glucose	3.34901216576473	row129	E150
+C00906	5,6-Dihydrothymine	-3.4296395157387995	row123	E15
+C00073	L-Methionine	-3.7997164342549596	row96	E107
+C00962	beta-D-Galactose	3.34901216576473	row129	E150
+C00064	L-Glutamine	-6.54603865763937	row12	E11
+C02336	beta-D-Fructose; beta-Fruit sugar; beta-D-arabino-Hexulose; beta-Levulose; Fructose	3.34901216576473	row129	E150
+C02642	N-Carbamoyl-beta-alanine	-2.97275123969832	row161	E28
+C02238	5-Oxo-L-proline	-4.64182382230172	row61	E42
+C00064	L-Glutamine	-6.4428804590589	row15	E11
+C00954	Indole-3-acetate	-2.62520911714451	row190	E133
+C14800	1-Nitronaphthalene-5,6-oxide	2.8288737565228903	row171	E197
+C05642	Formyl-N-acetyl-5-methoxykynurenamine	-2.83656088833978	row170	E196
+c226crn	cervonyl carnitine	-3.60937265938115	row111	E131
+C00819	D-Glutamine; D-2-Aminoglutaramic acid	-4.01661042089861	row87	E11
+C00795	D-Tagatose; lyxo-Hexulose	3.34901216576473	row129	E150
+C05938	L-4-Hydroxyglutamate semialdehyde	-6.253689982318339	row20	E50
+C00064	L-Glutamine	-7.130432166859549	row2	E11
+C00073	L-Methionine	-3.19829977802529	row142	E107
+C05100	3-Ureidoisobutyrate	-6.54603865763937	row12	E11
+C05938	L-4-Hydroxyglutamate semialdehyde	-4.64182382230172	row61	E47
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	-3.9980532066296695	row88	E48
+C04148	alpha-N-Phenylacetyl-L-glutamine	-2.83656088833978	row170	E196
+C00152	L-Asparagine	-2.97275123969832	row161	E28
+C06124	Sphingosine 1-phosphate	-5.3353158202078	row37	E71
+C00025	L-Glutamate	-6.253689982318339	row20	E50
+odecrn	octadecenoyl carnitine	-2.76564242845247	row179	E204
+C02642	N-Carbamoyl-beta-alanine	6.637318695875	row9	E27
+C00025	L-Glutamate	-4.64182382230172	row61	E47
+C05462	Chenodeoxyglycocholate	2.8621769233633705	row167	E179
+C05100	3-Ureidoisobutyrate	-7.130432166859549	row2	E11
+C00819	D-Glutamine; D-2-Aminoglutaramic acid	-6.253689982318339	row20	E11
+C00819	D-Glutamine; D-2-Aminoglutaramic acid	2.73714947103078	row181	E9
+C01879	5-Oxoproline	-6.36479241310637	row17	E44
+C00073	L-Methionine	-4.0654039718083705	row83	E107
+C00491	L-Cystine; L-Dicysteine; L-alpha-Diamino-beta-dithiolactic acid	-4.7668919123144	row52	E74
+C00906	5,6-Dihydrothymine	-7.130432166859549	row2	E15
+vacccrn	Vaccenyl carnitine	-2.76564242845247	row179	E204
+C00155	L-Homocysteine	-4.73328130969255	row55	E75
+pcrn	propionyl-carnitine	-3.34461788075521	row130	E154
+C00124	D-Galactose	3.34901216576473	row129	E150
+C05462	Chenodeoxyglycocholate	2.5683357193427003	row198	E180
+C04281	L-1-Pyrroline-3-hydroxy-5-carboxylate	-6.36479241310637	row17	E44
+C05938	L-4-Hydroxyglutamate semialdehyde	-3.9980532066296695	row88	E48
+C00064	L-Glutamine	-3.92476039813466	row93	E7
+C00152	L-Asparagine	6.637318695875	row9	E27
+C00984	alpha-D-Galactose	3.34901216576473	row129	E150
+C00327	L-Citrulline; 2-Amino-5-ureidovaleric acid; Citrulline	-2.65953215138089	row188	E208
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	3.0366353011857097	row155	E48
+C00025	L-Glutamate	-3.9980532066296695	row88	E48
+tetpent6crn	tetracosapentaenoyl carnitine	-2.57301924030854	row195	E216
+C01252	4-(2-Aminophenyl)-2,4-dioxobutanoate	2.8288737565228903	row171	E200
+C01879	5-Oxoproline	-4.64182382230172	row61	E42
+C05466		2.8621769233633705	row167	E179
+C00906	5,6-Dihydrothymine	-6.4428804590589	row15	E15
+C05100	3-Ureidoisobutyrate	-3.92476039813466	row93	E7
+C05660	5-Methoxyindoleacetate	-2.4880123979537903	row205	E223
+pcrn	propionyl-carnitine	-3.24626627854567	row137	E154
+C04281	L-1-Pyrroline-3-hydroxy-5-carboxylate	-4.64182382230172	row61	E42
+C04281	L-1-Pyrroline-3-hydroxy-5-carboxylate	-3.7866608839346405	row98	E44
+C01879	5-Oxoproline	-6.253689982318339	row20	E44
+C00328	L-Kynurenine	4.07637391147651	row82	E103
+C05466		2.5683357193427003	row198	E180
+C00064	L-Glutamine	-4.01661042089861	row87	E11
+dcsptn1crn	docosa-4,7,10,13,16-pentaenoyl carnitine	-4.33619940370111	row68	E88
+C00267	alpha-D-Glucose	3.34901216576473	row129	E150
+C02990	L-Palmitoylcarnitine	-4.35272798015441	row67	E86
+clpndcrn	clupanodonyl carnitine	-4.33619940370111	row68	E88
+C04281	L-1-Pyrroline-3-hydroxy-5-carboxylate	-6.253689982318339	row20	E44
+C00819	D-Glutamine; D-2-Aminoglutaramic acid	-6.54603865763937	row12	E11
+C00095	D-Fructose	3.34901216576473	row129	E150
+C14802	1-Nitronaphthalene-7,8-oxide	2.8288737565228903	row171	E197
+C00819	D-Glutamine; D-2-Aminoglutaramic acid	-6.4428804590589	row15	E11
+C05100	3-Ureidoisobutyrate	-4.01661042089861	row87	E11
+C00064	L-Glutamine	-6.253689982318339	row20	E11
+C00064	L-Glutamine	2.73714947103078	row181	E9
+C04282	1-Pyrroline-4-hydroxy-2-carboxylate	-6.36479241310637	row17	E44
+C00245	Taurine	-6.82121637835256	row7	E24
+C00247	L-Sorbose; L-xylo-Hexulose	3.34901216576473	row129	E150
+C00819	D-Glutamine; D-2-Aminoglutaramic acid	-7.130432166859549	row2	E11
+C01879	5-Oxoproline	-3.7866608839346405	row98	E44
+elaidcrn	Elaidic carnitine	-2.76564242845247	row179	E204
+C05634	5-Hydroxyindoleacetaldehyde	-2.62520911714451	row190	E133
+C00073	L-Methionine	-3.5771601677355402	row115	E107
+C00936		3.34901216576473	row129	E150
+tetpent3crn	tetracosapentaenoyl carnitine	-2.57301924030854	row195	E216
+C00078	L-Tryptophan	-2.4880123979537903	row205	E221
+C06124	Sphingosine 1-phosphate	-5.55745988790797	row31	E72
+lneldccrn	Linoelaidyl carnitine	-3.1558414124983103	row146	E169
+C00073	L-Methionine	-3.8024170988795603	row95	E107
+C05100	3-Ureidoisobutyrate	-6.253689982318339	row20	E11
+C01717	4-Hydroxy-2-quinolinecarboxylic acid	2.8288737565228903	row171	E197
+C05100	3-Ureidoisobutyrate	2.73714947103078	row181	E9
+C00293	Glucose	3.34901216576473	row129	E150
+C00738	D-Hexose	3.34901216576473	row129	E150
+C05938	L-4-Hydroxyglutamate semialdehyde	3.0366353011857097	row155	E48
