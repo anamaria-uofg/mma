@@ -1,0 +1,96 @@
+CPD_ID	CPD_NAME	mz_row_Statistic	From_mz_row	From_EmpiricalCompound
+C00133	D-Alanine	-3.4118517211704	row88	E84
+C06010	(S)-2-Acetolactate; (S)-2-Hydroxy-2-methyl-3-oxobutanoate	2.52391884047125	row149	E128
+C01582	Galactose	-6.83226417053175	row15	E19
+C00124	D-Galactose	-6.83226417053175	row15	E19
+C00022	Pyruvate	-6.66002718347257	row19	E34
+C02642	N-Carbamoyl-beta-alanine	-2.83163127329325	row117	E129
+C00795	D-Tagatose; lyxo-Hexulose	-6.83226417053175	row15	E19
+C01595	linoleic acid (all cis C18:2) n-6	7.26763931586359	row10	E11
+C05100	3-Ureidoisobutyrate	-2.52657941688516	row147	E10
+C00256	D-Lactate	-6.81962946174451	row16	E28
+C00738	D-Hexose	-6.83226417053175	row15	E19
+C00095	D-Fructose	-6.83226417053175	row15	E19
+C00525	D-Tryptophan	-2.71164656391129	row128	E140
+C00247	L-Sorbose; L-xylo-Hexulose	-6.83226417053175	row15	E19
+C06124	Sphingosine 1-phosphate	-6.2364307558677305	row22	E43
+C00221	beta-D-Glucose	4.45377652365217	row51	E22
+C00031	D-Glucose	-6.83226417053175	row15	E19
+C06124	Sphingosine 1-phosphate	-4.95137797071407	row41	E42
+C00064	L-Glutamine	-2.52657941688516	row147	E10
+CE2122	methyl indole-3-acetate	-4.22604856226412	row56	E86
+C00906	5,6-Dihydrothymine	-2.52657941688516	row147	E150
+C00267	alpha-D-Glucose	-6.83226417053175	row15	E19
+C00078	L-Tryptophan	-2.71164656391129	row128	E140
+C00293	Glucose	-6.83226417053175	row15	E19
+C01530	octadecanoate (n-C18:0)	2.6737017895998303	row134	E142
+C00222	3-Oxopropanoate; Malonate semialdehyde	-6.66002718347257	row19	E34
+C02336	beta-D-Fructose; beta-Fruit sugar; beta-D-arabino-Hexulose; beta-Levulose; Fructose	4.45377652365217	row51	E22
+C00984	alpha-D-Galactose	4.45377652365217	row51	E22
+C01530	octadecanoate (n-C18:0)	2.65113788113946	row136	E142
+C00900	2-Acetolactate	2.52391884047125	row149	E128
+C00258	(R)-Glycerate	-6.66002718347257	row19	E37
+C01013	3-Hydroxypropanoate; 3-Hydroxypropanoic acid; 3-Hydroxypropionate; 3-Hydroxypropionic acid; Hydracrylic acid	-6.83226417053175	row15	E28
+C00936		4.45377652365217	row51	E22
+C00186	L-Lactate	-6.81962946174451	row16	E28
+C05642	Formyl-N-acetyl-5-methoxykynurenamine	-2.5068157640310003	row152	E161
+C00059	Sulfate	2.4816306155221	row154	E163
+C05660	5-Methoxyindoleacetate	-2.9229191538241404	row109	E122
+ocdcya	octadecadienoate (n-C18:2)	-2.9697682694694305	row106	E119
+C00041	L-Alanine	-3.4118517211704	row88	E84
+C00819	D-Glutamine; D-2-Aminoglutaramic acid	-7.2702678934673	row9	E10
+C00219	arachidonic acid	2.7804616482057405	row122	E133
+C01013	3-Hydroxypropanoate; 3-Hydroxypropanoic acid; 3-Hydroxypropionate; 3-Hydroxypropionic acid; Hydracrylic acid	-6.81962946174451	row16	E28
+C00073	L-Methionine	-3.42719975758156	row84	E103
+C00299	Uridine	-4.4525756632601	row52	E81
+C00962	beta-D-Galactose	4.45377652365217	row51	E22
+C00149	L-Malate	-4.6325296695269005	row47	E65
+C00064	L-Glutamine	-7.2702678934673	row9	E10
+C00221	beta-D-Glucose	-6.83226417053175	row15	E19
+C00491	L-Cystine; L-Dicysteine; L-alpha-Diamino-beta-dithiolactic acid	-4.76596245807938	row43	E55
+C06010	(S)-2-Acetolactate; (S)-2-Hydroxy-2-methyl-3-oxobutanoate	2.84706540364259	row116	E128
+C00186	L-Lactate	-6.83226417053175	row15	E28
+C00740	D-Serine	4.28702372476316	row54	E9
+C00577	D-Glyceraldehyde	-6.83226417053175	row15	E25
+C00962	beta-D-Galactose	-6.83226417053175	row15	E19
+C02679	Dodecanoate (n-C12:0)	-3.04386457670917	row102	E118
+C00137	myo-Inositol	4.45377652365217	row51	E22
+C00249	Hexadecanoate (n-C16:0)	3.33384634036614	row90	E106
+C00099	beta-Alanine	-3.4118517211704	row88	E84
+C05100	3-Ureidoisobutyrate	-7.2702678934673	row9	E10
+C00819	D-Glutamine; D-2-Aminoglutaramic acid	-6.741175236764059	row18	E10
+C02336	beta-D-Fructose; beta-Fruit sugar; beta-D-arabino-Hexulose; beta-Levulose; Fructose	-6.83226417053175	row15	E19
+lneldc	linoelaidic acid (all trans C18:2)	-2.9697682694694305	row106	E119
+C00795	D-Tagatose; lyxo-Hexulose	4.45377652365217	row51	E22
+C00159	D-Mannose	4.45377652365217	row51	E22
+C01801	Deoxyribose	-4.7278295369144905	row45	E56
+C00984	alpha-D-Galactose	-6.83226417053175	row15	E19
+C00106	Uracil	-4.3121137747987595	row53	E83
+C00037	Glycine	3.23064428601457	row93	E109
+C00738	D-Hexose	4.45377652365217	row51	E22
+C04555	3beta-Hydroxyandrost-5-en-17-one 3-sulfate; Dehydroepiandrosterone sulfate	-5.1104005811984905	row36	E53
+C00184	Dihydroxyacetone	-6.81962946174451	row16	E28
+C00095	D-Fructose	4.45377652365217	row51	E22
+C00247	L-Sorbose; L-xylo-Hexulose	4.45377652365217	row51	E22
+C00936		-6.83226417053175	row15	E19
+C00159	D-Mannose	-6.83226417053175	row15	E19
+C00031	D-Glucose	4.45377652365217	row51	E22
+C04555	3beta-Hydroxyandrost-5-en-17-one 3-sulfate; Dehydroepiandrosterone sulfate	-2.7619084384182	row123	E53
+C05100	3-Ureidoisobutyrate	-6.741175236764059	row18	E10
+C00245	Taurine	-5.35348840591777	row31	E46
+C00267	alpha-D-Glucose	4.45377652365217	row51	E22
+C00293	Glucose	4.45377652365217	row51	E22
+C00819	D-Glutamine; D-2-Aminoglutaramic acid	-2.52657941688516	row147	E10
+C00184	Dihydroxyacetone	-6.83226417053175	row15	E28
+C00149	L-Malate	-2.61210688002375	row141	E64
+C00026	2-Oxoglutarate	-5.20249625420196	row34	E48
+C00900	2-Acetolactate	2.84706540364259	row116	E128
+C00213	Sarcosine; N-Methylglycine	-3.4118517211704	row88	E84
+C00065	L-Serine	4.28702372476316	row54	E9
+C01582	Galactose	4.45377652365217	row51	E22
+C00124	D-Galactose	4.45377652365217	row51	E22
+C00256	D-Lactate	-6.83226417053175	row15	E28
+C00064	L-Glutamine	-6.741175236764059	row18	E10
+C00152	L-Asparagine	-2.83163127329325	row117	E129
+C00137	myo-Inositol	-6.83226417053175	row15	E19
+C04148	alpha-N-Phenylacetyl-L-glutamine	-2.5068157640310003	row152	E161

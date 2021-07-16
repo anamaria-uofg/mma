@@ -1,0 +1,3 @@
+CPD_ID	CPD_NAME	mz_row_Statistic	From_mz_row	From_EmpiricalCompound
+C00330	Deoxyguanosine	7.149201676228019	row1	E3
+C00212	Adenosine	7.149201676228019	row1	E3

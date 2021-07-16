@@ -123,10 +123,10 @@ class Adduct:
 
 class AdductList:
 
-    def __init__(self, mz, ms2specdata, metabolites_dict, ms2_files):
+    def __init__(self, mz, ms2specdata, metabolites_dict, ms2_files, positive):
 
         self.adducts = []
-        adduct_list = self.compute_adducts(mz)
+        adduct_list = self.compute_adducts(mz, positive)
         for i in adduct_list:
             adduct = Adduct(i[0], i[1], i[2], ms2specdata, metabolites_dict, ms2_files)
             self.adducts.append(adduct)
@@ -171,16 +171,32 @@ class AdductList:
                  (mz - 57.9586 - PROTON, 'M+NaCl[1+]', ''),
                  (mz + 72.0211 - PROTON, 'M-C3H4O2+H[1+]', 'C3H4O2'),
                  (mz - 83.9613 - PROTON, 'M+HCOOK[1+]', ''),
-                 (mz + 83.9613 - PROTON, 'M-HCOOK+H[1+]', 'HCO2K'),
-                 ]
+                 (mz + 83.9613 - PROTON, 'M-HCOOK+H[1+]', 'HCO2K')]
+
+        else:
+            addList = [ ((mz + PROTON)*3, 'M-3H[3-]' ,''),
+                       ((mz + PROTON)*2, 'M-2H[2-]' ,''),
+                       (mz + 19.01839, 'M-H2O-H' ,''),
+                        (mz + PROTON, 'M-H' ,''),
+                        (mz - 20.974666, 'M+Na-2H' ,''),
+                       (mz - 34.969402, 'M+Cl' ,''),
+                       (mz - 36.948606, 'M+K-2H' ,''),
+                       (mz - 44.998201, 'M+FA-H' ,''),
+                       (mz - 59.013851, 'M+Hac-H' ,''),
+                       (mz - 78.918885, 'M+Br' ,''),
+                       (mz - 112.985586, 'M+TFA-H' ,''),
+                       ((mz + PROTON)/2, '2M-H' ,''),
+                       ((mz - 44.998201)/2, '2M+FA-H' ,''),
+                       ((mz -59.013851)/2, '2M+Hac-H' ,''),
+                       ((mz + PROTON)/3, '3M-H' ,'')]
 
         return addList
 
 
 class PeakInfo:
 
-    def __init__(self, cid, mz, rt):
-        self.cid = cid
+    def __init__(self, cid, mz, rt, mode):
+        self.cid = mode+str(cid)
         self.mz = mz
         self.rt = rt
         self.pval = 0.0
@@ -196,6 +212,8 @@ class PeakInfo:
         self.best_ms2_match_adduct = ''
         self.ms2_annotation = ''
         self.ms2_kegg_id = ''
+        self.final_annotation = ''
+        self.intensities = {}
 
     def add_pval(self, pval):
         self.pval = pval
@@ -212,20 +230,61 @@ class PeakInfo:
         self.mm_pathway = pathway
     def add_mm_kegg_id(self, kegg_id):
         self.mm_kegg_id = kegg_id
+    def change_cid(self, mode):
+        new_cid = int(self.cid.split(mode)[1].split('.')[0])
+        self.cid = new_cid
 
-    def add_std_match(self, standards_dict, metabolites_dict, ppm = 0.1, ppm_rt = 60):
+    def add_intensities(self, intensities):
+        self.intensities = intensities
+
+
+    def get_intensities(self):
+        return self.intensities
+
+    def calculate_tolerance(self, x, ppm):
+
+        tolerance = x*ppm/1000000
+
+        return tolerance
+
+    def add_std_match(self, standards_dict, metabolites_dict, ppm = 3, ppm_rt = 30, positive=True):
+        import numpy as np
+        PROTON = 1.00727646677
+        std_annotations = []
 
         for key in standards_dict.keys():
-            if self.mz >= key-ppm and self.mz <= key + ppm:
-                if self.rt*60 >= standards_dict[key][1]-ppm_rt and self.rt*60 <= standards_dict[key][1]+ppm_rt:
-                    self.std_annotation = standards_dict[key][0]
 
-        for metabolite in metabolites_dict:
-            if str(self.std_annotation).strip() == str(metabolites_dict[metabolite][2]).lower().strip():
-                self.std_kegg_id = metabolites_dict[metabolite][5]
+            for adduct in self.adducts:
+
+                tolerance = self.calculate_tolerance(adduct[0], ppm)
+                if positive:
+                    mz = float(key) - PROTON
+                else:
+                    mz = float(key) + PROTON
+                if mz - tolerance <= float(adduct[0]) <= mz + tolerance:
+
+
+                    if standards_dict[key][1]-ppm_rt <= self.rt*60 <= standards_dict[key][1]+ppm_rt:
+                        diff = np.abs((float(key)- PROTON) - float(adduct[0]))
+                        std_annotations.append(((standards_dict[key][0], adduct[1]), diff))
+                        print(self.cid, standards_dict[key][0], adduct[1], diff)
+        if len(std_annotations) >1:
+             self.std_annotation = sorted(std_annotations, key=lambda x: x[1])[0][0]
+
+        elif len(std_annotations) == 1:
+            self.std_annotation =  std_annotations[0][0]
+       # for metabolite in metabolites_dict:
+       #     if str(self.std_annotation[0]).strip() == str(metabolites_dict[metabolite][2]).lower().strip():
+       #         if metabolites_dict[metabolite][5] != None:
+       #             self.std_kegg_id = metabolites_dict[metabolite][5]
+       #         else:
+       #             self.hmdb_kegg_id = metabolite
 
     def add_spectra(self, aligner_gp):
-        new_peakid = self.cid - 1
+
+        #new_peakid = int((self.cid).split('p')[1].split('.')[0]) - 1
+        new_peakid = int((self.cid)) - 1
+
         num_peaks = aligner_gp.peaksets[new_peakid].n_peaks
         spectra = {}
         if num_peaks > 1:
@@ -236,52 +295,125 @@ class PeakInfo:
 
         self.spectra = spectra
 
-    def add_adducts(self, metabolites_dict, ms2_files):
-        self.adducts = AdductList(self.mz, self.spectra, metabolites_dict, ms2_files)
+    def add_adduct_list(self, mode = True):
+        self.adducts = AdductList.compute_adducts(self, self.mz, mode)
+
+    def add_adducts(self, metabolites_dict, ms2_files, positive = True):
+        self.adducts = AdductList(self.mz, self.spectra, metabolites_dict, ms2_files, positive)
         self.best_ms2_match_adduct = self.adducts.get_adduct_with_best_score()
 
-    def add_ms2_match(self, metabolites_dict, score_theshold = 0.3):
+    def add_ms2_match(self, metabolites_dict, score_theshold = 0.1):
         if self.best_ms2_match_adduct:
             if self.best_ms2_match_adduct.score > score_theshold:
                 self.ms2_annotation = metabolites_dict[self.best_ms2_match_adduct.hmdb][2]
                 self.ms2_kegg_id = metabolites_dict[self.best_ms2_match_adduct.hmdb][5]
 
     def get_possible_kegg_ids(self):
+        import numpy as np
         kegg_ids = []
         if self.mm_kegg_id != '':
             kegg_list = self.mm_kegg_id.split(';')
             for i in kegg_list:
                 kegg_ids.append(i)
 
-        if self.std_kegg_id != '':
+        if self.std_kegg_id != '' or self.std_kegg_id != None:
             kegg_ids.append(self.std_kegg_id)
 
         if self.ms2_kegg_id != '':
             kegg_ids.append(self.ms2_kegg_id)
 
-        return kegg_ids
+        kegg_ids = np.array(kegg_ids)
+        if len(kegg_ids) >0:
+            return kegg_ids
+        else:
+            return None
 
-    def plot_boxplots(self, data, order = ['controlVL','infectedVL','controlMalaria', 'infectedMalaria', 'controlZika','infectedZika']):
+    def get_taxonomy(self, metabolites_dict):
+        taxonomy = []
+        if self.get_possible_kegg_ids() is not None:
+            for kegg in self.get_possible_kegg_ids():
+                for metabolite in metabolites_dict:
+                    if metabolites_dict[metabolite][5] == kegg:
+                        taxonomy.append((metabolites_dict[metabolite][2], metabolites_dict[metabolite][8]))
+            return taxonomy
+        else:
+            return None
+
+    def is_standard(self):
+        if self.std_kegg_id != '':
+            return True
+        else:
+            return False
+
+    def plot_boxplots(self, data, path):
         import seaborn as sns
         import matplotlib.pyplot as plt
-        plt.figure(figsize=(10,5))
 
-        ax = sns.boxplot(y=data[str(self.cid)], x='ConditionDataset', data = data, order = order, palette = 'Set2' )
-        ax = sns.swarmplot(y=data[str(self.cid)], x='ConditionDataset', data = data, order = order, color="black")
 
-        plt.ylabel("Intensity (log2)")
-        plt.title(self.mz)
-        plt.show()
+        fig, ax = plt.subplots()
+
+
+        nice_fonts = {"text.usetex": True,
+            "font.family": "serif",
+            "font.serif" : "Times New Roman"}
+        plt.rcParams.update(nice_fonts)
+
+        plt.rc('font', family='serif')
+        plt.rc('xtick', labelsize=19)
+        plt.rc('ytick', labelsize=19)
+
+
+
+        light_blue = '#34BBE3'
+        light_red = '#E3688F'
+        pal = {'control': light_blue, 'infected': light_red}
+
+        lighter_red = '#FF75A3'
+        lighter_blue = '#39D1FF'
+        face_pal = {'control': lighter_blue, 'infected': lighter_red}
+        hue_order = ['control', 'infected']
+
+        boxprops = {'edgecolor': 'k', 'linewidth': 2, 'alpha':.5}
+        lineprops = {'color': 'k', 'linewidth': 2}
+
+        boxplot_kwargs = {'boxprops': boxprops, 'medianprops': lineprops,
+                          'whiskerprops': lineprops, 'capprops': lineprops,
+                          'width': 0.75, 'palette': face_pal,
+                          'hue_order': hue_order}
+
+        stripplot_kwargs = {'linewidth': 0.6, 'size': 6, 'alpha': 0.7,
+                            'palette': pal, 'hue_order': hue_order}
+
+        cid = str(self.cid)
+
+        ax = sns.boxplot(y=data[cid], x='Dataset',hue = 'Condition', data = data, fliersize=0, **boxplot_kwargs)
+        ax = sns.stripplot(y=data[cid], x='Dataset',hue = 'Condition', data = data, split=True, jitter=0.2, **stripplot_kwargs)
+        handles, labels = ax.get_legend_handles_labels()
+        lgd = ax.legend(handles[0:2], labels[0:2], loc='best', fontsize='medium',
+               handletextpad=0.5)
+        lgd.legendHandles[0]._sizes = [40]
+        lgd.legendHandles[1]._sizes = [40]
+        ax.get_legend().remove()
+        plt.ylabel("Peak Intensity (log2)")
+        title = 'Peak ID '+str(self.cid) + ':m/z=' + str(round(self.mz, 4))
+        plt.title(title)
+
+
+
+        #plt.show()
+
+        fig.savefig(path+str(cid)+'.png', format='png', dpi=400, bbox_inches='tight')
+        plt.close(fig)
+
 
     def __str__(self):
-        return """peak {self.cid}: {self.mz}, {self.rt} \n
-                p-val: {self.pval}, {self.tval} \n
-                {self.mm_annotation} \n
-                {self.mm_pathway} \n
-                {self.mm_kegg_id} \n
-                {self.spectra} \n
-                {self.adducts} \n
-                {self.best_ms2_match_adduct}""".format(self = self)
+        return """Peak {self.cid}: m/z = {self.mz}, rt = {self.rt} \n
+                p-val: {self.pval}, logFC = {self.logfc} \n
+                mm annotation: {self.mm_annotation} \n
+                std annotation: {self.std_annotation} \n
+                hmdb annotation: {self.ms2_annotation} \n
+
+                {self.spectra} \n""".format(self = self)
 
 
 

@@ -13,15 +13,15 @@
             <absolutetolerance>0.01</absolutetolerance>
             <ppmtolerance>10.0</ppmtolerance>
         </parameter>
-        <parameter name="Weight for m/z">75.0</parameter>
-        <parameter name="Retention time tolerance" type="absolute">0.5</parameter>
-        <parameter name="Weight for RT">25.0</parameter>
+        <parameter name="Weight for m/z">50.0</parameter>
+        <parameter name="Retention time tolerance" type="absolute">0.3</parameter>
+        <parameter name="Weight for RT">50.0</parameter>
         <parameter name="Require same charge state">false</parameter>
         <parameter name="Require same ID">false</parameter>
         <parameter name="Compare isotope pattern" selected="false">
             <parameter name="Isotope m/z tolerance">
                 <absolutetolerance>0.001</absolutetolerance>
-                <ppmtolerance>5.0</ppmtolerance>
+                <ppmtolerance>2.0</ppmtolerance>
             </parameter>
             <parameter name="Minimum absolute intensity"/>
             <parameter name="Minimum score"/>

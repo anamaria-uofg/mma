@@ -1,0 +1,5 @@
+CPD_ID	CPD_NAME	mz_row_Statistic	From_mz_row	From_EmpiricalCompound
+C00380	Cytosine	5.4032826314086995	row2	E2
+C05522	Cytosine (in DNA)	5.358086287495991	row3	E1
+C00380	Cytosine	5.358086287495991	row3	E1
+C05522	Cytosine (in DNA)	5.4032826314086995	row2	E2

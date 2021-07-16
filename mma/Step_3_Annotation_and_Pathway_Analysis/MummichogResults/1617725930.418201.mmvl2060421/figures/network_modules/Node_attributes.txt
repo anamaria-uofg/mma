@@ -1,0 +1,282 @@
+CPD_ID	CPD_NAME	mz_row_Statistic	From_mz_row	From_EmpiricalCompound
+C14770	11,12-EET	21.0399219048579	row10	E22
+C05962		13.117460320892599	row37	E66
+C14765	13-OxoODE; 13-KODE; (9Z,11E)-13-Oxooctadeca-9,11-dienoic acid	15.7968241907319	row32	E52
+C00777	Retinoate	4.34898331423262	row397	E330
+C00245	Taurine	-7.337131906842519	row149	E155
+C02218	2-Aminoacrylate; Dehydroalanine	4.55143209027624	row375	E507
+C04230	Lysophosphatidylcholine	3.54268104828221	row535	E614
+CE5928		8.42804295174827	row124	E51
+C06315	Lipoxin B4; LXB4; 5S,14R,15S-Trihydroxy-6E,8Z,10E,12E-eicosatetraenoic acid; (6E,8Z,10E,12E)-(5S,14R,15S)-Trihydroxyicosa-6,8,10,12-tetraenoic acid	4.10553441150972	row431	E161
+C08261		-4.11596128062113	row429	E563
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	-9.10639742470806	row108	E142
+C05955	Prostaglandin C2; PGC2	6.787656560755019	row167	E51
+C02165	Leukotriene B4	15.9902159494115	row31	E32
+C14769	8,9-EET; (5Z,11Z,14Z)-8,9-Epoxyeicosa-5,11,14-trienoic acid; (5Z,11Z,14Z)-8,9-Epoxyicosa-5,11,14-trienoic acid	13.286486365941	row36	E22
+C05957	Prostaglandin J2; PGJ2	4.10553441150972	row431	E51
+CE5535		4.10553441150972	row431	E51
+C04849	(5Z,9E,14Z)-(8xi,11R,12S)-11,12-Epoxy-8-hydroxyicosa-5,9,14-trienoic acid; (5Z,9E,14Z)-(8xi,11R,12S)-11,12-Epoxy-8-hydroxyicosa-5,9,14-trienoate; Hepoxilin A3	3.2505849225171803	row588	E32
+C14770	11,12-EET	13.286486365941	row36	E22
+CE5527		11.413307260099401	row58	E52
+CE5013		13.286486365941	row36	E21
+CE5527		5.07313365668975	row291	E52
+C01595	linoleic acid (all cis C18:2) n-6	-5.036842499213019	row293	E289
+C14813	11H-14,15-EETA; 11-Hydroxy-14,15-EETA; 11-Hydroxy-14,15-epoxyeicosatrienoic acid; (5Z,8Z,12E)-14,15-Epoxy-11-hydroxyeicosa-5,8,12-trienoic acid; (5Z,8Z,12E)-14,15-Epoxy-11-hydroxyicosa-5,8,12-trienoic acid	4.34898331423262	row397	E32
+C14771	14,15-EET; (5Z,8Z,11Z)-14,15-Epoxyeicosa-5.8.11-trienoic acid; (5Z,8Z,11Z)-14,15-Epoxyicosa-5.8.11-trienoic acid	11.1054932216958	row65	E22
+C14826	12(13)-EpOME; (12R,13S)-(9Z)-12,13-Epoxyoctadecenoic acid	-6.24195288236542	row203	E84
+CE5016	13,14-dihydroxy-retinol	21.0399219048579	row10	E22
+C00245	Taurine	-6.34365811877874	row193	E155
+CE2061		4.961531111982071	row302	E421
+C05959	11-epi-Prostaglandin F2alpha; 11-epi-Prostaglandin F2a; 11-epi-PGF2alpha; 11-epi-PGF2a	4.34898331423262	row397	E30
+C06426	(6Z,9Z,12Z)-Octadecatrienoic acid; 6,9,12-Octadecatrienoic acid; gamma-Linolenic acid; Gamolenic acid	12.9214407902525	row40	E83
+C02165	Leukotriene B4	4.34898331423262	row397	E32
+C05938	L-4-Hydroxyglutamate semialdehyde	3.82059072657676	row479	E142
+C00909	Leukotriene A4	19.5767501760461	row13	E31
+C02165	Leukotriene B4	20.533358798068303	row11	E32
+C04805	5-Hydroxyeicosatetraenoate	13.286486365941	row36	E22
+C05938	L-4-Hydroxyglutamate semialdehyde	-3.00233569851677	row639	E141
+CE2006		6.53521396304547	row181	E256
+C00777	Retinoate	3.2505849225171803	row588	E330
+C16679	all-trans-18-Hydroxyretinoic acid	8.42804295174827	row124	E163
+C06427	(9Z,12Z,15Z)-Octadecatrienoic acid; alpha-Linolenic acid; 9,12,15-Octadecatrienoic acid; Linolenate; alpha-Linolenate	12.9214407902525	row40	E83
+C14775	14,15-DHET; (5Z,8Z,11Z)-14,15-Dihydroxyeicosa-5,8,11-trienoic acid; (5Z,8Z,11Z)-14,15-Dihydroxyicosa-5,8,11-trienoic acid	11.1054932216958	row65	E25
+C00584	Prostaglandin E2	4.10553441150972	row431	E161
+C14773	8,9-DHET; (5Z,11Z,14Z)-8,9-Dihydroxyeicosa-5,11,14-trienoic acid; (5Z,11Z,14Z)-8,9-Dihydroxyicosa-5,11,14-trienoic acid	11.1054932216958	row65	E25
+C04686	(13E)-(15S)-15-Hydroxy-9-oxoprosta-11,13-dienoate; Prostaglandin C1	4.34898331423262	row397	E32
+C02075	Retinyl ester; all-trans-Retinyl ester	11.1054932216958	row65	E21
+C01595	linoleic acid (all cis C18:2) n-6	-6.35486501529722	row192	E289
+C14813	11H-14,15-EETA; 11-Hydroxy-14,15-EETA; 11-Hydroxy-14,15-epoxyeicosatrienoic acid; (5Z,8Z,12E)-14,15-Epoxy-11-hydroxyeicosa-5,8,12-trienoic acid; (5Z,8Z,12E)-14,15-Epoxy-11-hydroxyicosa-5,8,12-trienoic acid	3.2505849225171803	row588	E32
+CE5016	13,14-dihydroxy-retinol	11.1054932216958	row65	E22
+C04686	(13E)-(15S)-15-Hydroxy-9-oxoprosta-11,13-dienoate; Prostaglandin C1	20.533358798068303	row11	E32
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	-4.61097754467119	row356	E141
+C14749	19(S)-HETE; (19S)-Hydroxyeicosatetraenoic acid; (19S)-Hydroxyicosatetraenoic acid; (19S)-Hydroxy arachidonic acid	11.1054932216958	row65	E22
+C14762	13(S)-HODE; (13S)-Hydroxyoctadecadienoic acid; (9Z, 11E)-(13S)-13-Hydroxyoctadeca-9,11-dienoic acid	12.8868982205633	row43	E84
+C04843	(5Z,9E,14Z)-(8xi,11xi,12S)-8,11,12-Trihydroxyicosa-5,9,14-trienoate; (5Z,9E,14Z)-(8xi,11xi,12S)-8,11,12-Trihydroxyicosa-5,9,14-trienoic acid; Trioxilin A3	4.34898331423262	row397	E30
+C01180	2-keto-4-methylthiobutyrate	19.0286734575021	row15	E37
+C14826	12(13)-EpOME; (12R,13S)-(9Z)-12,13-Epoxyoctadecenoic acid	12.8868982205633	row43	E84
+C00155	L-Homocysteine	-5.68354497734968	row232	E357
+C15493	9-cis-Retinoic acid	5.909361517987059	row222	E330
+C01595	linoleic acid (all cis C18:2) n-6	-5.90483303129316	row223	E289
+CE2577		4.62037699720619	row353	E469
+C14765	13-OxoODE; 13-KODE; (9Z,11E)-13-Oxooctadeca-9,11-dienoic acid	11.413307260099401	row58	E52
+C06428	(5Z,8Z,11Z,14Z,17Z)-Icosapentaenoic acid; (5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoic acid; Eicosapentaenoic acid; 5,8,11,14,17-Icosapentaenoic acid; (5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoate	11.1054932216958	row65	E21
+retinal-11-cis	cis-11-retinal	13.286486365941	row36	E62
+CE5528		7.34887053434482	row148	E205
+CE5928		6.787656560755019	row167	E51
+C14765	13-OxoODE; 13-KODE; (9Z,11E)-13-Oxooctadeca-9,11-dienoic acid	5.07313365668975	row291	E52
+C00376	Retinal	11.1054932216958	row65	E62
+C00696	Prostaglandin D2	4.10553441150972	row431	E161
+C05938	L-4-Hydroxyglutamate semialdehyde	-9.10639742470806	row108	E142
+CE5925		4.10553441150972	row431	E51
+CE5932	13,14-epoxy-retinol	13.286486365941	row36	E21
+C14771	14,15-EET; (5Z,8Z,11Z)-14,15-Epoxyeicosa-5.8.11-trienoic acid; (5Z,8Z,11Z)-14,15-Epoxyicosa-5.8.11-trienoic acid	21.0399219048579	row10	E22
+C04742	(15S)-15-Hydroxy-5,8,11-cis-13-trans-eicosatetraenoate; (15S)-15-Hydroxy-5,8,11-cis-13-trans-icosatetraenoate; (5Z,8Z,11Z,13E)-(15S)-15-Hydroxyicosa-5,8,11,13-tetraenoic acid; 15(S)-HETE	11.1054932216958	row65	E22
+C14772	5,6-DHET; (8Z,11Z,14Z)-5,6-Dihydroxyeicosa-8,11,14-trienoic acid; (8Z,11Z,14Z)-5,6-Dihydroxyicosa-8,11,14-trienoic acid	11.1054932216958	row65	E25
+C05953	Prostaglandin A2; PGA2; Medullin	4.10553441150972	row431	E51
+C04671	(5Z)-(15S)-11alpha-Hydroxy-9,15-dioxoprostanoate	4.10553441150972	row431	E161
+C04686	(13E)-(15S)-15-Hydroxy-9-oxoprosta-11,13-dienoate; Prostaglandin C1	3.2505849225171803	row588	E32
+C16681	cis-9-retinal	11.1054932216958	row65	E62
+C05522	Cytosine (in DNA)	5.595904386356441	row241	E362
+C14781	15H-11,12-EETA; 15-Hydroxy-11,12-epoxyeicosatrienoic acid; (5Z,8Z,13E)-(15S)-11,12-Epoxy-15-hydroxyeicosa-5,8,13-trienoic acid; (5Z,8Z,13E)-(15S)-11,12-Epoxy-15-hydroxyicosa-5,8,13-trienoic acid	15.9902159494115	row31	E32
+retinal-cis-9	cis-9-retinal	11.1054932216958	row65	E62
+C16680	all-trans-5,6-Epoxyretinoic acid; all-trans-5,6-Epoxy-5,6-dihydroretinoic acid	8.42804295174827	row124	E163
+CE5589	13-cis-retinal	13.286486365941	row36	E62
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	5.32683618515592	row267	E142
+C14771	14,15-EET; (5Z,8Z,11Z)-14,15-Epoxyeicosa-5.8.11-trienoic acid; (5Z,8Z,11Z)-14,15-Epoxyicosa-5.8.11-trienoic acid	13.286486365941	row36	E22
+C02110	11-cis-Retinal; 11-cis-Vitamin A aldehyde; 11-cis-Retinene	13.286486365941	row36	E62
+C14827	9(S)-HPODE; 9(S)-HPOD; (10E,12Z)-(9S)-9-Hydroperoxyoctadeca-10,12-dienoic acid	15.7968241907319	row32	E56
+CE5528		7.6600957325117305	row143	E205
+C08261		-3.08561519386719	row619	E563
+C14781	15H-11,12-EETA; 15-Hydroxy-11,12-epoxyeicosatrienoic acid; (5Z,8Z,13E)-(15S)-11,12-Epoxy-15-hydroxyeicosa-5,8,13-trienoic acid; (5Z,8Z,13E)-(15S)-11,12-Epoxy-15-hydroxyicosa-5,8,13-trienoic acid	20.533358798068303	row11	E32
+C14762	13(S)-HODE; (13S)-Hydroxyoctadecadienoic acid; (9Z, 11E)-(13S)-13-Hydroxyoctadeca-9,11-dienoic acid	-6.24195288236542	row203	E84
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	4.94341590905201	row306	E141
+C04654	(13E)-11alpha-Hydroxy-9,15-dioxoprost-13-enoate	8.42804295174827	row124	E161
+CE2577		-2.7023104734080396	row717	E469
+C15493	9-cis-Retinoic acid	4.34898331423262	row397	E330
+C00491	L-Cystine; L-Dicysteine; L-alpha-Diamino-beta-dithiolactic acid	-6.100425252592619	row211	E300
+C14749	19(S)-HETE; (19S)-Hydroxyeicosatetraenoic acid; (19S)-Hydroxyicosatetraenoic acid; (19S)-Hydroxy arachidonic acid	21.0399219048579	row10	E22
+C00025	L-Glutamate	3.82059072657676	row479	E142
+C00025	L-Glutamate	-3.00233569851677	row639	E141
+C05938	L-4-Hydroxyglutamate semialdehyde	-4.61097754467119	row356	E141
+C04853	w-hydroxyl leukotriene B4	4.10553441150972	row431	E161
+C04741	Alprostadil; Prostaglandin E1; (13E)-(15S)-11alpha,15-Dihydroxy-9-oxoprost-13-enoate	4.34898331423262	row397	E30
+CE2576		-2.7023104734080396	row717	E779
+C05966	15(S)-HPETE; (5Z,8Z,11Z,13E)-(15S)-15-Hydroperoxyicosa-5,8,11,13-tetraenoic acid; 15-Hydroperoxyeicosatetraenoate; 15-Hydroperoxyicosatetraenoate; 15-Hydroperoxyeicosatetraenoic acid; 15-Hydroperoxyicosatetraenoic acid; (5Z,8Z,11Z,13E)-(15S)-15-Hydroperoxyicosa-5,8,11,13-tetraenoate	15.9902159494115	row31	E32
+C06315	Lipoxin B4; LXB4; 5S,14R,15S-Trihydroxy-6E,8Z,10E,12E-eicosatetraenoic acid; (6E,8Z,10E,12E)-(5S,14R,15S)-Trihydroxyicosa-6,8,10,12-tetraenoic acid	8.42804295174827	row124	E161
+C02075	Retinyl ester; all-trans-Retinyl ester	13.286486365941	row36	E21
+C04230	Lysophosphatidylcholine	3.7554672275674505	row494	E614
+C04741	Alprostadil; Prostaglandin E1; (13E)-(15S)-11alpha,15-Dihydroxy-9-oxoprost-13-enoate	20.533358798068303	row11	E30
+C00909	Leukotriene A4	4.34898331423262	row397	E31
+C01312	Prostaglandin I2; (5Z,13E)-(15S)-6,9alpha-Epoxy-11alpha,15-dihydroxyprosta-5,13-dienoate; Prostacyclin; PGI2; Epoprostenol	4.10553441150972	row431	E161
+CE5016	13,14-dihydroxy-retinol	13.286486365941	row36	E22
+C05957	Prostaglandin J2; PGJ2	8.42804295174827	row124	E51
+CE5535		8.42804295174827	row124	E51
+CE6506		6.53521396304547	row181	E256
+C14749	19(S)-HETE; (19S)-Hydroxyeicosatetraenoic acid; (19S)-Hydroxyicosatetraenoic acid; (19S)-Hydroxy arachidonic acid	13.286486365941	row36	E22
+C00909	Leukotriene A4	20.533358798068303	row11	E31
+CE5932	13,14-epoxy-retinol	21.0399219048579	row10	E21
+CE5526		15.7968241907319	row32	E52
+C04742	(15S)-15-Hydroxy-5,8,11-cis-13-trans-eicosatetraenoate; (15S)-15-Hydroxy-5,8,11-cis-13-trans-icosatetraenoate; (5Z,8Z,11Z,13E)-(15S)-15-Hydroxyicosa-5,8,11,13-tetraenoic acid; 15(S)-HETE	21.0399219048579	row10	E22
+CE5925		16.3757786770632	row30	E51
+C02198	Thromboxane A2; (5Z,13E)-(15S)-9alpha,11alpha-Epoxy-15-hydroxythromboxa-5,13-dienoate; (5Z,9alpha,11alpha,13E,15S)-9,11-Epoxy-15-hydroxythromboxa-5,13-dien-1-oic acid	4.10553441150972	row431	E567
+C15493	9-cis-Retinoic acid	3.2505849225171803	row588	E330
+C02165	Leukotriene B4	3.2505849225171803	row588	E32
+CE5575	9-cis-retinal	11.1054932216958	row65	E62
+C06426	(6Z,9Z,12Z)-Octadecatrienoic acid; 6,9,12-Octadecatrienoic acid; gamma-Linolenic acid; Gamolenic acid	12.8868982205633	row43	E83
+C14782	11,12,15-THETA; 11,12,15-Trihydroxyicosatrienoic acid; (5Z,8Z,13E)-(15S)-11,12,15-Trihydroxyeicosa-5,8,12-trienoic acid; (5Z,8Z,13E)-(15S)-11,12,15-Trihydroxyicosa-5,8,12-trienoic acid	20.533358798068303	row11	E30
+CE2961	4-hydroxy-all-trans-retinyl acetate	11.8930134172075	row54	E96
+C00073	L-Methionine	3.8877663171151604	row473	E534
+C00376	Retinal	13.286486365941	row36	E62
+C14748	20-Hydroxyeicosatetraenoic acid	11.1054932216958	row65	E22
+C00302	DL-Glutamate; DL-Glutaminic acid; 2-Aminoglutaric acid; Glutamate	5.2158331524360495	row276	E410
+C00519	Hypotaurine	-132.570328516802	row2	E10
+C04685	(13E)-(15S)-15-Hydroxy-9-oxoprosta-10,13-dienoate; Prostaglandin A1; PGA1	15.9902159494115	row31	E32
+C04742	(15S)-15-Hydroxy-5,8,11-cis-13-trans-eicosatetraenoate; (15S)-15-Hydroxy-5,8,11-cis-13-trans-icosatetraenoate; (5Z,8Z,11Z,13E)-(15S)-15-Hydroxyicosa-5,8,11,13-tetraenoic acid; 15(S)-HETE	13.286486365941	row36	E22
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	5.2158331524360495	row276	E142
+C05955	Prostaglandin C2; PGC2	4.10553441150972	row431	E51
+CE5932	13,14-epoxy-retinol	8.43337681402193	row123	E21
+C00639	Prostaglandin F2alpha; (5Z,13E)-(15S)-9alpha,11alpha,15-Trihydroxyprosta-5,13-dienoate; (+)-Prostaglandin F2a; 7-[3,5-Dihydroxy-2-(3-hydroxy-1-octenyl)cyclopentyl]-5-heptenoic acid; 9a,11a-PGF2; Amoglandin; Cyclosin; Dinoprost; Enzaprost; Enzaprost F; Panacelan; PGF2a; 9,11,15-Trihydroxy-(5Z,9a,11a,13E,15S)-prosta-5,13-dien-1-oic acid; Prostaglandin F2a; Prostin F 2 alpha; Protamodin; U 14583	4.34898331423262	row397	E30
+C05957	Prostaglandin J2; PGJ2	16.3757786770632	row30	E51
+CE5535		16.3757786770632	row30	E51
+C05356	5-Hydroperoxy-6-trans-8,11,14-cis-eicosatetraenoate	15.9902159494115	row31	E32
+C16681	cis-9-retinal	13.286486365941	row36	E62
+CE5013		21.0399219048579	row10	E21
+C00639	Prostaglandin F2alpha; (5Z,13E)-(15S)-9alpha,11alpha,15-Trihydroxyprosta-5,13-dienoate; (+)-Prostaglandin F2a; 7-[3,5-Dihydroxy-2-(3-hydroxy-1-octenyl)cyclopentyl]-5-heptenoic acid; 9a,11a-PGF2; Amoglandin; Cyclosin; Dinoprost; Enzaprost; Enzaprost F; Panacelan; PGF2a; 9,11,15-Trihydroxy-(5Z,9a,11a,13E,15S)-prosta-5,13-dien-1-oic acid; Prostaglandin F2a; Prostin F 2 alpha; Protamodin; U 14583	20.533358798068303	row11	E30
+C00584	Prostaglandin E2	8.42804295174827	row124	E161
+C05938	L-4-Hydroxyglutamate semialdehyde	5.32683618515592	row267	E142
+C14768	5,6-EET; (8Z,11Z,14Z)-5,6-Epoxyeicosa-8,11,14-trienoic acid; (8Z,11Z,14Z)-5,6-Epoxyicosa-8,11,14-trienoic acid	11.1054932216958	row65	E22
+C00025	L-Glutamate	-9.10639742470806	row108	E142
+C05954	Prostaglandin B2; PGB2	4.10553441150972	row431	E51
+C00427	Prostaglandin H2	4.10553441150972	row431	E161
+C16677	all-trans-4-Hydroxyretinoic acid	4.10553441150972	row431	E163
+C04685	(13E)-(15S)-15-Hydroxy-9-oxoprosta-10,13-dienoate; Prostaglandin A1; PGA1	20.533358798068303	row11	E32
+C14774	11,12-DHET	21.0399219048579	row10	E25
+C14827	9(S)-HPODE; 9(S)-HPOD; (10E,12Z)-(9S)-9-Hydroperoxyoctadeca-10,12-dienoic acid	5.07313365668975	row291	E56
+C00245	Taurine	-8.93555106631672	row114	E155
+C05938	L-4-Hydroxyglutamate semialdehyde	4.94341590905201	row306	E141
+C00909	Leukotriene A4	3.2505849225171803	row588	E31
+C00380	Cytosine	5.595904386356441	row241	E362
+C06314	Lipoxin A4; LXA4; 5S,6R,15S-Trihydroxy-7E,9E,11Z,13E-eicosatetraenoic acid; (7E,9E,11Z,13E)-(5S,6R,15S)-5,6,15-Trihydroxyicosa-7,9,11,13-tetraenoic acid	4.10553441150972	row431	E161
+C15493	9-cis-Retinoic acid	4.961531111982071	row302	E330
+C16677	all-trans-4-Hydroxyretinoic acid	6.787656560755019	row167	E163
+C05965	12(S)-HPETE; (5Z,8Z,10E,14Z)-(12S)-12-Hydroperoxyicosa-5,8,10,14-tetraenoic acid; (5Z,8Z,10E,14Z)-(12S)-12-Hydroperoxyicosa-5,8,10,14-tetraenoate; 12-Hydroperoxyeicosatetraenoate; 12-Hydroperoxyicosatetraenoate; 12-Hydroperoxyeicosatetraenoic acid; 12-Hydroperoxyicosatetraenoic acid	15.9902159494115	row31	E32
+C05956	Prostaglandin G2; PGG2	13.117460320892599	row37	E66
+C02075	Retinyl ester; all-trans-Retinyl ester	21.0399219048579	row10	E21
+CE5013		8.43337681402193	row123	E21
+C14781	15H-11,12-EETA; 15-Hydroxy-11,12-epoxyeicosatrienoic acid; (5Z,8Z,13E)-(15S)-11,12-Epoxy-15-hydroxyeicosa-5,8,13-trienoic acid; (5Z,8Z,13E)-(15S)-11,12-Epoxy-15-hydroxyicosa-5,8,13-trienoic acid	4.34898331423262	row397	E32
+CE5537		4.10553441150972	row431	E51
+C05954	Prostaglandin B2; PGB2	8.42804295174827	row124	E51
+C00696	Prostaglandin D2	8.42804295174827	row124	E161
+CE5925		8.42804295174827	row124	E51
+C04805	5-Hydroxyeicosatetraenoate	11.1054932216958	row65	E22
+C16677	all-trans-4-Hydroxyretinoic acid	8.42804295174827	row124	E163
+C05957	Prostaglandin J2; PGJ2	6.787656560755019	row167	E51
+CE5535		6.787656560755019	row167	E51
+C05953	Prostaglandin A2; PGA2; Medullin	8.42804295174827	row124	E51
+C05965	12(S)-HPETE; (5Z,8Z,10E,14Z)-(12S)-12-Hydroperoxyicosa-5,8,10,14-tetraenoic acid; (5Z,8Z,10E,14Z)-(12S)-12-Hydroperoxyicosa-5,8,10,14-tetraenoate; 12-Hydroperoxyeicosatetraenoate; 12-Hydroperoxyicosatetraenoate; 12-Hydroperoxyeicosatetraenoic acid; 12-Hydroperoxyicosatetraenoic acid	20.533358798068303	row11	E32
+C04671	(5Z)-(15S)-11alpha-Hydroxy-9,15-dioxoprostanoate	8.42804295174827	row124	E161
+C00073	L-Methionine	-4.2266829986191405	row411	E535
+C00073	L-Methionine	-3.43512589927681	row555	E535
+C04717	(9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoic acid; (9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoate; 13(S)-HPODE; 13S-Hydroperoxy-9Z,11E-octadecadienoic acid	15.7968241907319	row32	E56
+CE5526		11.413307260099401	row58	E52
+C06429	(4Z,7Z,10Z,13Z,16Z,19Z)-Docosahexaenoic acid; 4,7,10,13,16,19-Docosahexaenoic acid; Docosahexaenoic acid	6.93066276936357	row161	E228
+C02075	Retinyl ester; all-trans-Retinyl ester	8.43337681402193	row123	E21
+C05938	L-4-Hydroxyglutamate semialdehyde	2.76236037460132	row702	E141
+C14748	20-Hydroxyeicosatetraenoic acid	21.0399219048579	row10	E22
+C00025	L-Glutamate	-4.61097754467119	row356	E141
+C00302	DL-Glutamate; DL-Glutaminic acid; 2-Aminoglutaric acid; Glutamate	3.82059072657676	row479	E410
+C04849	(5Z,9E,14Z)-(8xi,11R,12S)-11,12-Epoxy-8-hydroxyicosa-5,9,14-trienoic acid; (5Z,9E,14Z)-(8xi,11R,12S)-11,12-Epoxy-8-hydroxyicosa-5,9,14-trienoate; Hepoxilin A3	15.9902159494115	row31	E32
+C05955	Prostaglandin C2; PGC2	16.3757786770632	row30	E51
+C00959	Prostaglandin B1	15.9902159494115	row31	E32
+CE5928		4.10553441150972	row431	E51
+C14781	15H-11,12-EETA; 15-Hydroxy-11,12-epoxyeicosatrienoic acid; (5Z,8Z,13E)-(15S)-11,12-Epoxy-15-hydroxyeicosa-5,8,13-trienoic acid; (5Z,8Z,13E)-(15S)-11,12-Epoxy-15-hydroxyicosa-5,8,13-trienoic acid	3.2505849225171803	row588	E32
+CE5537		8.42804295174827	row124	E51
+CE5575	9-cis-retinal	13.286486365941	row36	E62
+C05938	L-4-Hydroxyglutamate semialdehyde	5.2158331524360495	row276	E142
+C14768	5,6-EET; (8Z,11Z,14Z)-5,6-Epoxyeicosa-8,11,14-trienoic acid; (8Z,11Z,14Z)-5,6-Epoxyicosa-8,11,14-trienoic acid	21.0399219048579	row10	E22
+C05954	Prostaglandin B2; PGB2	16.3757786770632	row30	E51
+C14825	9(10)-EpOME; (9R,10S)-(12Z)-9,10-Epoxyoctadecenoic acid	12.8868982205633	row43	E84
+C05966	15(S)-HPETE; (5Z,8Z,11Z,13E)-(15S)-15-Hydroperoxyicosa-5,8,11,13-tetraenoic acid; 15-Hydroperoxyeicosatetraenoate; 15-Hydroperoxyicosatetraenoate; 15-Hydroperoxyeicosatetraenoic acid; 15-Hydroperoxyicosatetraenoic acid; (5Z,8Z,11Z,13E)-(15S)-15-Hydroperoxyicosa-5,8,11,13-tetraenoate	4.34898331423262	row397	E32
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	2.76236037460132	row702	E141
+C05966	15(S)-HPETE; (5Z,8Z,11Z,13E)-(15S)-15-Hydroperoxyicosa-5,8,11,13-tetraenoic acid; 15-Hydroperoxyeicosatetraenoate; 15-Hydroperoxyicosatetraenoate; 15-Hydroperoxyeicosatetraenoic acid; 15-Hydroperoxyicosatetraenoic acid; (5Z,8Z,11Z,13E)-(15S)-15-Hydroperoxyicosa-5,8,11,13-tetraenoate	20.533358798068303	row11	E32
+C05953	Prostaglandin A2; PGA2; Medullin	16.3757786770632	row30	E51
+C14782	11,12,15-THETA; 11,12,15-Trihydroxyicosatrienoic acid; (5Z,8Z,13E)-(15S)-11,12,15-Trihydroxyeicosa-5,8,12-trienoic acid; (5Z,8Z,13E)-(15S)-11,12,15-Trihydroxyicosa-5,8,12-trienoic acid	4.34898331423262	row397	E30
+C00959	Prostaglandin B1	4.34898331423262	row397	E32
+C06428	(5Z,8Z,11Z,14Z,17Z)-Icosapentaenoic acid; (5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoic acid; Eicosapentaenoic acid; 5,8,11,14,17-Icosapentaenoic acid; (5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoate	13.286486365941	row36	E21
+C00959	Prostaglandin B1	20.533358798068303	row11	E32
+C14814	11,14,15-THETA; 11,14,15-Trihydroxyicosatrienoic acid; (5Z,8Z,12E)-11,14,15-Trihydroxyeicosa-5,8,12-trienoic acid; (5Z,8Z,12E)-11,14,15-Trihydroxyicosa-5,8,12-trienoic acid	20.533358798068303	row11	E30
+C04853	w-hydroxyl leukotriene B4	8.42804295174827	row124	E161
+C00065	L-Serine	4.55143209027624	row375	E504
+C14768	5,6-EET; (8Z,11Z,14Z)-5,6-Epoxyeicosa-8,11,14-trienoic acid; (8Z,11Z,14Z)-5,6-Epoxyicosa-8,11,14-trienoic acid	13.286486365941	row36	E22
+CE5932	13,14-epoxy-retinol	11.1054932216958	row65	E21
+C00740	D-Serine	4.55143209027624	row375	E504
+C14778	16(R)-HETE; (5Z,8Z,11Z,14Z)-(16R)-16-Hydroxyeicosa-5,8,11,14-tetraenoic acid; (5Z,8Z,11Z,14Z)-(16R)-16-Hydroxyicosa-5,8,11,14-tetraenoic acid	11.1054932216958	row65	E22
+C01312	Prostaglandin I2; (5Z,13E)-(15S)-6,9alpha-Epoxy-11alpha,15-dihydroxyprosta-5,13-dienoate; Prostacyclin; PGI2; Epoprostenol	8.42804295174827	row124	E161
+C16679	all-trans-18-Hydroxyretinoic acid	4.10553441150972	row431	E163
+C06427	(9Z,12Z,15Z)-Octadecatrienoic acid; alpha-Linolenic acid; 9,12,15-Octadecatrienoic acid; Linolenate; alpha-Linolenate	12.8868982205633	row43	E83
+C14779	9(S)-HETE; (5Z,7E,11Z,14Z)-(9S)-9-Hydroxyeicosa-5,7,11,14-tetraenoic acid; (5Z,7E,11Z,14Z)-(9S)-9-Hydroxyicosa-5,7,11,14-tetraenoic acid	21.0399219048579	row10	E24
+C02712	N-Acetylmethionine	-87.376407226264	row9	E20
+C04805	5-Hydroxyeicosatetraenoate	21.0399219048579	row10	E22
+CE5537		16.3757786770632	row30	E51
+C14813	11H-14,15-EETA; 11-Hydroxy-14,15-EETA; 11-Hydroxy-14,15-epoxyeicosatrienoic acid; (5Z,8Z,12E)-14,15-Epoxy-11-hydroxyeicosa-5,8,12-trienoic acid; (5Z,8Z,12E)-14,15-Epoxy-11-hydroxyicosa-5,8,12-trienoic acid	15.9902159494115	row31	E32
+retinal-cis-9	cis-9-retinal	13.286486365941	row36	E62
+C00025	L-Glutamate	5.32683618515592	row267	E142
+C04685	(13E)-(15S)-15-Hydroxy-9-oxoprosta-10,13-dienoate; Prostaglandin A1; PGA1	4.34898331423262	row397	E32
+C05966	15(S)-HPETE; (5Z,8Z,11Z,13E)-(15S)-15-Hydroperoxyicosa-5,8,11,13-tetraenoic acid; 15-Hydroperoxyeicosatetraenoate; 15-Hydroperoxyicosatetraenoate; 15-Hydroperoxyeicosatetraenoic acid; 15-Hydroperoxyicosatetraenoic acid; (5Z,8Z,11Z,13E)-(15S)-15-Hydroperoxyicosa-5,8,11,13-tetraenoate	3.2505849225171803	row588	E32
+C05954	Prostaglandin B2; PGB2	6.787656560755019	row167	E51
+CE5925		6.787656560755019	row167	E51
+CE5589	13-cis-retinal	11.1054932216958	row65	E62
+C00073	L-Methionine	-4.46401861083869	row384	E535
+C05356	5-Hydroperoxy-6-trans-8,11,14-cis-eicosatetraenoate	4.34898331423262	row397	E32
+C00073	L-Methionine	-4.22391289081925	row412	E535
+C05953	Prostaglandin A2; PGA2; Medullin	6.787656560755019	row167	E51
+C00959	Prostaglandin B1	3.2505849225171803	row588	E32
+C02110	11-cis-Retinal; 11-cis-Vitamin A aldehyde; 11-cis-Retinene	11.1054932216958	row65	E62
+C05356	5-Hydroperoxy-6-trans-8,11,14-cis-eicosatetraenoate	20.533358798068303	row11	E32
+C14769	8,9-EET; (5Z,11Z,14Z)-8,9-Epoxyeicosa-5,11,14-trienoic acid; (5Z,11Z,14Z)-8,9-Epoxyicosa-5,11,14-trienoic acid	11.1054932216958	row65	E22
+C14775	14,15-DHET; (5Z,8Z,11Z)-14,15-Dihydroxyeicosa-5,8,11-trienoic acid; (5Z,8Z,11Z)-14,15-Dihydroxyicosa-5,8,11-trienoic acid	21.0399219048579	row10	E25
+C16679	all-trans-18-Hydroxyretinoic acid	6.787656560755019	row167	E163
+C00025	L-Glutamate	4.94341590905201	row306	E141
+C14813	11H-14,15-EETA; 11-Hydroxy-14,15-EETA; 11-Hydroxy-14,15-epoxyeicosatrienoic acid; (5Z,8Z,12E)-14,15-Epoxy-11-hydroxyeicosa-5,8,12-trienoic acid; (5Z,8Z,12E)-14,15-Epoxy-11-hydroxyicosa-5,8,12-trienoic acid	20.533358798068303	row11	E32
+C14773	8,9-DHET; (5Z,11Z,14Z)-8,9-Dihydroxyeicosa-5,11,14-trienoic acid; (5Z,11Z,14Z)-8,9-Dihydroxyicosa-5,11,14-trienoic acid	21.0399219048579	row10	E25
+C00073	L-Methionine	-2.9399284338069904	row653	E534
+C14770	11,12-EET	11.1054932216958	row65	E22
+C05959	11-epi-Prostaglandin F2alpha; 11-epi-Prostaglandin F2a; 11-epi-PGF2alpha; 11-epi-PGF2a	20.533358798068303	row11	E30
+CE5013		11.1054932216958	row65	E21
+C14825	9(10)-EpOME; (9R,10S)-(12Z)-9,10-Epoxyoctadecenoic acid	-6.24195288236542	row203	E84
+C04717	(9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoic acid; (9Z,11E)-(13S)-13-Hydroperoxyoctadeca-9,11-dienoate; 13(S)-HPODE; 13S-Hydroperoxy-9Z,11E-octadecadienoic acid	5.07313365668975	row291	E56
+C05955	Prostaglandin C2; PGC2	8.42804295174827	row124	E51
+CE5527		15.7968241907319	row32	E52
+C14774	11,12-DHET	11.1054932216958	row65	E25
+CE5928		16.3757786770632	row30	E51
+C04686	(13E)-(15S)-15-Hydroxy-9-oxoprosta-11,13-dienoate; Prostaglandin C1	15.9902159494115	row31	E32
+C05965	12(S)-HPETE; (5Z,8Z,10E,14Z)-(12S)-12-Hydroperoxyicosa-5,8,10,14-tetraenoic acid; (5Z,8Z,10E,14Z)-(12S)-12-Hydroperoxyicosa-5,8,10,14-tetraenoate; 12-Hydroperoxyeicosatetraenoate; 12-Hydroperoxyicosatetraenoate; 12-Hydroperoxyeicosatetraenoic acid; 12-Hydroperoxyicosatetraenoic acid	4.34898331423262	row397	E32
+C00427	Prostaglandin H2	8.42804295174827	row124	E161
+C04685	(13E)-(15S)-15-Hydroxy-9-oxoprosta-10,13-dienoate; Prostaglandin A1; PGA1	3.2505849225171803	row588	E32
+C00777	Retinoate	5.909361517987059	row222	E330
+CE5537		6.787656560755019	row167	E51
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	3.82059072657676	row479	E142
+C06428	(5Z,8Z,11Z,14Z,17Z)-Icosapentaenoic acid; (5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoic acid; Eicosapentaenoic acid; 5,8,11,14,17-Icosapentaenoic acid; (5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoate	21.0399219048579	row10	E21
+C05356	5-Hydroperoxy-6-trans-8,11,14-cis-eicosatetraenoate	3.2505849225171803	row588	E32
+C00217	D-Glutamate; D-Glutamic acid; D-Glutaminic acid; D-2-Aminoglutaric acid	-3.00233569851677	row639	E141
+CE5526		5.07313365668975	row291	E52
+C06314	Lipoxin A4; LXA4; 5S,6R,15S-Trihydroxy-7E,9E,11Z,13E-eicosatetraenoic acid; (7E,9E,11Z,13E)-(5S,6R,15S)-5,6,15-Trihydroxyicosa-7,9,11,13-tetraenoic acid	8.42804295174827	row124	E161
+C00025	L-Glutamate	2.76236037460132	row702	E141
+C14772	5,6-DHET; (8Z,11Z,14Z)-5,6-Dihydroxyeicosa-8,11,14-trienoic acid; (8Z,11Z,14Z)-5,6-Dihydroxyicosa-8,11,14-trienoic acid	21.0399219048579	row10	E25
+C16680	all-trans-5,6-Epoxyretinoic acid; all-trans-5,6-Epoxy-5,6-dihydroretinoic acid	4.10553441150972	row431	E163
+C14778	16(R)-HETE; (5Z,8Z,11Z,14Z)-(16R)-16-Hydroxyeicosa-5,8,11,14-tetraenoic acid; (5Z,8Z,11Z,14Z)-(16R)-16-Hydroxyicosa-5,8,11,14-tetraenoic acid	21.0399219048579	row10	E22
+C04843	(5Z,9E,14Z)-(8xi,11xi,12S)-8,11,12-Trihydroxyicosa-5,9,14-trienoate; (5Z,9E,14Z)-(8xi,11xi,12S)-8,11,12-Trihydroxyicosa-5,9,14-trienoic acid; Trioxilin A3	20.533358798068303	row11	E30
+C00073	L-Methionine	-3.9190111661502796	row463	E535
+C05965	12(S)-HPETE; (5Z,8Z,10E,14Z)-(12S)-12-Hydroperoxyicosa-5,8,10,14-tetraenoic acid; (5Z,8Z,10E,14Z)-(12S)-12-Hydroperoxyicosa-5,8,10,14-tetraenoate; 12-Hydroperoxyeicosatetraenoate; 12-Hydroperoxyicosatetraenoate; 12-Hydroperoxyeicosatetraenoic acid; 12-Hydroperoxyicosatetraenoic acid	3.2505849225171803	row588	E32
+C00025	L-Glutamate	5.2158331524360495	row276	E142
+C00777	Retinoate	4.961531111982071	row302	E330
+C14748	20-Hydroxyeicosatetraenoic acid	13.286486365941	row36	E22
+C06428	(5Z,8Z,11Z,14Z,17Z)-Icosapentaenoic acid; (5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoic acid; Eicosapentaenoic acid; 5,8,11,14,17-Icosapentaenoic acid; (5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoate	8.43337681402193	row123	E21
+C04849	(5Z,9E,14Z)-(8xi,11R,12S)-11,12-Epoxy-8-hydroxyicosa-5,9,14-trienoic acid; (5Z,9E,14Z)-(8xi,11R,12S)-11,12-Epoxy-8-hydroxyicosa-5,9,14-trienoate; Hepoxilin A3	4.34898331423262	row397	E32
+C04849	(5Z,9E,14Z)-(8xi,11R,12S)-11,12-Epoxy-8-hydroxyicosa-5,9,14-trienoic acid; (5Z,9E,14Z)-(8xi,11R,12S)-11,12-Epoxy-8-hydroxyicosa-5,9,14-trienoate; Hepoxilin A3	20.533358798068303	row11	E32
+C16680	all-trans-5,6-Epoxyretinoic acid; all-trans-5,6-Epoxy-5,6-dihydroretinoic acid	6.787656560755019	row167	E163
+C14814	11,14,15-THETA; 11,14,15-Trihydroxyicosatrienoic acid; (5Z,8Z,12E)-11,14,15-Trihydroxyeicosa-5,8,12-trienoic acid; (5Z,8Z,12E)-11,14,15-Trihydroxyicosa-5,8,12-trienoic acid	4.34898331423262	row397	E30
+C04654	(13E)-11alpha-Hydroxy-9,15-dioxoprost-13-enoate	4.10553441150972	row431	E161
+C14778	16(R)-HETE; (5Z,8Z,11Z,14Z)-(16R)-16-Hydroxyeicosa-5,8,11,14-tetraenoic acid; (5Z,8Z,11Z,14Z)-(16R)-16-Hydroxyicosa-5,8,11,14-tetraenoic acid	13.286486365941	row36	E22
+C14769	8,9-EET; (5Z,11Z,14Z)-8,9-Epoxyeicosa-5,11,14-trienoic acid; (5Z,11Z,14Z)-8,9-Epoxyicosa-5,11,14-trienoic acid	21.0399219048579	row10	E22
+retinal-11-cis	cis-11-retinal	11.1054932216958	row65	E62

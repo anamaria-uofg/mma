@@ -12,7 +12,6 @@ import itertools
 import sys
 import mass_spec_utils
 
-#from mass_spec_utils.data_processing import pick_peaks, align, match_aligned_to_original, load_aligned_peaks
 
 WIN = 'D:/'
 MAC = '/Volumes/Transcend2/17_20_PhD/19_20_PhD_Metabolomics/'
@@ -21,8 +20,15 @@ osp = MAC
 #MNET_PATH = '/Users/anamaria/git/molnet/code/'
 #sys.path.append(MNET_PATH)
 
+sys.path.append('/Users/anamaria/git/pymzmine/')
+from mzmine import align, load_aligned_peaks, match_aligned_to_original
+MZMINE_COMMAND = '/Users/anamaria/git/MZmine-2.40.1/startMZmine_MacOSX.command'
 
-def create_std_dict(input_std_csv_file, include_actual_rt= True):
+def calculate_tolerance(x, ppm):
+    tolerance = x*ppm/1000000
+    return tolerance
+
+def create_std_dict(input_std_csv_file, polarity, include_actual_rt= True):
 
     """ Creates and returns a dictionary for a standards csv file obtained from ToxID."""
 
@@ -32,11 +38,12 @@ def create_std_dict(input_std_csv_file, include_actual_rt= True):
         detected_mz = row['Detected m/z']
         expected_rt = row['Expected RT']
         actual_rt = row['Actual RT']
-        polarity = row['Polarity']
-        if include_actual_rt:
-            standards[compound_name] = (detected_mz, expected_rt, actual_rt, polarity)
-        else:
-            standards[compound_name] = (detected_mz, expected_rt, polarity)
+        cmpd_polarity = row['Polarity']
+        if cmpd_polarity == polarity:
+            if include_actual_rt:
+                standards[compound_name] = (detected_mz, expected_rt, actual_rt, polarity)
+            else:
+                standards[compound_name] = (detected_mz, expected_rt, polarity)
     return standards
 
 def create_std_dict_by_mz(input_std_csv_file, polarity):
@@ -95,8 +102,7 @@ def createMetaboliteSetList(original_files, output_dir, stds_csvs, original_csvs
                     listMetabolites.append(metaboliteSet)
     return listMetabolites
 
-
-def get_std_matches_for_files(original_files, output_dir, stds_csvs, original_csvs, rt_range = 0.5, mz_range = 0.0003):
+def get_std_matches_for_files(original_files, output_dir, stds_csvs, original_csvs, rt_range = 0.5, mz_ppm = 3):
 
     matches = {}
     for file_pos,o in enumerate(original_files):
@@ -108,8 +114,10 @@ def get_std_matches_for_files(original_files, output_dir, stds_csvs, original_cs
                 if re.match(r"^\d+.*$",line):
                     name = line.split(',')[2].lower()
                     polarity = line.split(',')[4]
-                    mz = float(line.split(',')[6])
-                    rt = float(line.split(',')[9])
+                    if line.split(',')[6] != '':
+                        mz = float(line.split(',')[6])
+                    if line.split(',')[9] != '':
+                        rt = float(line.split(',')[9])
 
                     with open(original_csvs[file_pos], 'r') as c:
                         reader = csv.reader(c)
@@ -123,9 +131,9 @@ def get_std_matches_for_files(original_files, output_dir, stds_csvs, original_cs
 
                             if not name in matches:
                                 matches[name] = {}
-
-                            if (mz_o <= mz+mz_range and mz_o >= mz-mz_range):
-                                if (rt_o <= rt+rt_range and rt_o >= rt-rt_range):
+                            mz_range = calculate_tolerance(mz,3)
+                            if (mz-mz_range <= mz_o <= mz+mz_range):
+                                if (rt-rt_range <= rt_o <= rt+rt_range):
                                     matches[name][o] = (id_o,mz_o,rt_o,int_o)
 
 
@@ -150,8 +158,6 @@ def get_std_matches_for_files(original_files, output_dir, stds_csvs, original_cs
 
     return matches
 
-
-
 def get_rts_between_datasets(dataset1, dataset2, matches, replicate = 1):
     if replicate == 1:
         replicate = '_1_'
@@ -159,6 +165,8 @@ def get_rts_between_datasets(dataset1, dataset2, matches, replicate = 1):
         replicate = '_2_'
     dataset1_rts = []
     dataset2_rts = []
+    dataset1_mzs = []
+    dataset2_mzs = []
     rts_diff = []
     for metabolite in matches:
         count = 0
@@ -167,15 +175,19 @@ def get_rts_between_datasets(dataset1, dataset2, matches, replicate = 1):
             if replicate in file:
                 if dataset1 in file.lower():
                     dataset1_rt = matches[metabolite][file][2]
+                    dataset1_mz = matches[metabolite][file][1]
                     count += 1
                 if dataset2 in file.lower():
                     dataset2_rt = matches[metabolite][file][2]
+                    dataset2_mz = matches[metabolite][file][1]
                     count += 1
         if count == 2:
             dataset1_rts.append(dataset1_rt)
             dataset2_rts.append(dataset2_rt)
+            dataset1_mzs.append(dataset1_mz)
+            dataset2_mzs.append(dataset1_mz)
             rts_diff.append(dataset1_rt-dataset2_rt)
-    return dataset1_rts, dataset2_rts, rts_diff
+    return dataset1_rts, dataset1_mzs, dataset2_rts, dataset2_mzs
 
 def get_stds_between_datasets(dataset1, dataset2, matches, replicate = 1):
     if replicate == 1:
@@ -229,7 +241,6 @@ def get_rts_within_datasets(dataset, matches):
             rts_diff.append(replicate1_rt-replicate2_rt)
     return replicate1_rts, replicate2_rts, rts_diff
 
-
 def get_rt_diff_between_datasets(dataset1_mzmine_stds, dataset2_mzmine_stds, file_number = 3):
 
     dataset1_rt = []
@@ -252,7 +263,6 @@ def get_rt_diff_between_datasets(dataset1_mzmine_stds, dataset2_mzmine_stds, fil
 
 
     return (dataset1_rt, dataset2_rt, stds, diff)
-
 
 def get_stats_on_diff(dataset1_rt,name1, dataset2_rt,name2,diff, setbinwidth, zcut = 1):
 
@@ -279,7 +289,6 @@ def get_stats_on_diff(dataset1_rt,name1, dataset2_rt,name2,diff, setbinwidth, zc
     plt.xlabel('RT '+ name1+ ' - RT ' +name2 + '(s)')
     plt.show()
 
-
 def try_gp_regressions(t_dataset_mod, t_reference_mod, plot= False):
     import GPy
     from sklearn import metrics
@@ -288,7 +297,7 @@ def try_gp_regressions(t_dataset_mod, t_reference_mod, plot= False):
     k_exp = GPy.kern.Exponential(1)
     k_nn = GPy.kern.MLP(1)
 
-    k_rbf = GPy.kern.RBF(input_dim=1, variance=2.25, lengthscale=1.5)
+    k_rbf = GPy.kern.RBF(input_dim=1, variance=0.1, lengthscale=0.5)
     k_mat32 = GPy.kern.Matern32(input_dim=1, variance=2., lengthscale=0.2)
     k_mat52 = GPy.kern.Matern52(1)
 
@@ -314,9 +323,9 @@ def try_gp_regressions(t_dataset_mod, t_reference_mod, plot= False):
     #test_data_target = REF[len(REF)//2+1:]
 
     #write a vector with kernels which might work
-    ks = [k_nn, k_nn+k_rbf,k_nn*k_rbf, k_cos*k_rbf, k_cos+k_rbf]
-    ks_names = ['MLP','MLP+RBF','MLP*RBF', 'Cosine*RBF', 'Cosine+RBF']
-    names = ['RBF','MLP','MLP+RBF','MLP*RBF','Cosine*RBF', 'Cosine+RBF']
+    ks = [k_nn, k_nn+k_rbf,k_nn*k_rbf]
+    ks_names = ['MLP','MLP+RBF','MLP*RBF']
+    names = ['RBF','MLP','MLP+RBF','MLP*RBF']
 
     accuracy_list = []
     mae_list = []
@@ -393,10 +402,6 @@ def try_gp_regressions(t_dataset_mod, t_reference_mod, plot= False):
     print("Final kernel:",namefinal)
     return mfinal, kfinal, results_table
 
-
-
-
-
 def return_data_with_no_outliers(dataset1, dataset2,diff, zscore_cutoff):
     #Eliminating outliers using zscore
     zscore = np.abs(stats.zscore(diff))
@@ -425,8 +430,6 @@ def return_data_with_no_outliers_2(dataset1, dataset2, zscore_cutoff):
 
     return mod1, mod2
 
-
-
 def create_bins_mz_range(dataset, n_bins):
     dataset.sort()
     lowest_value = np.min([i[0] for i in dataset])
@@ -442,7 +445,6 @@ def create_bins_same_width(dataset, n_bins):
     bin_length = total / n_bins
 
     return int(bin_length)
-
 
 def plot_gpr_bins_mz_range(n_bins,dataset1_string, dataset2_string, matches, optimization_restarts, zscore):
 
@@ -524,7 +526,6 @@ def plot_gpr_bins_same_width(n_bins, dataset1_string, dataset2_string, matches, 
     plt.xlim((2.5,22.5))
     plt.show()
 
-
 def get_non_anomalies(dataset_1_rt, dataset_2_rt):
     from sklearn.ensemble import IsolationForest
 
@@ -568,7 +569,7 @@ def modify_rtdrift_in_mztab(output_dir, output_dir_new, model, name_tag, standar
         filelen = len(glob.glob(os.path.join(output_dir,name_tag)))
     else:
         filelen = 6
-
+    print(filelen)
 
     peak_file_list = glob.glob(os.path.join(output_dir, name_tag))
     peak_file_list.sort()
@@ -634,8 +635,6 @@ def modify_rt_in_mztab(output_dir, output_dir_new, model, name_tag = '*.mzTab', 
                         new_line = '\t'.join([str(t) for t in tokens])
                         g.write(new_line + '\n')
 
-
-
 def modify_rtdrift_in_csv(csv_file, csv_file_new, model):
     with open(csv_file, 'r') as f:
         with open(csv_file_new, 'w') as g:
@@ -654,18 +653,46 @@ def modify_rtdrift_in_csv(csv_file, csv_file_new, model):
                     new_line = ','.join([str(t) for t in tokens])
                     g.write(new_line + '\n')
 
+def get_predicted_rt(old_rt, model):
+    new_rt,_ = model.predict(np.array([[old_rt]]))
+    new_rt = new_rt[0][0]
+    new_rt += old_rt
+    return new_rt
+
+def modify_rtdrift_in_csv_with_boxes(csv_file, csv_file_new, model):
+    with open(csv_file, 'r') as f:
+        with open(csv_file_new, 'w') as g:
+            for line in f:
+                line = line.rstrip()
+                if line.startswith('row'):
+                    g.write(line+'\n')
+                else:
+                    tokens = line.split(',')
+
+                    old_rt = float(tokens[2])
+                    old_rt_min = float(tokens[4])
+                    old_rt_max = float(tokens[5])
+
+
+                    tokens[2] = get_predicted_rt(old_rt, model)
+                    tokens[4] = get_predicted_rt(old_rt_min, model)
+                    tokens[5] = get_predicted_rt(old_rt_max, model)
+
+
+
+                    new_line = ','.join([str(t) for t in tokens])
+                    g.write(new_line + '\n')
 
 def change_rt_in_mgf(mgf_file, model):
+    #changed it to work with mass-spec-utils
     for idspec in mgf_file:
         spectrum = mgf_file[idspec]
-        old_rt = spectrum.rt/60
+        old_rt = float(spectrum.metadata['RTINSECONDS'])/60
         new_rt,_ = model.predict(np.array([[old_rt]]))
         new_rt = new_rt[0][0]
         new_rt += old_rt
         new_rt = new_rt*60
-        spectrum.rt = new_rt
-        #print(spectrum.rt)
-
+        spectrum.metadata['RTINSECONDS'] = new_rt
 
 def modify_rtdrif_in_mzxml(file_path, file_name, model):
     import xml.etree.ElementTree
@@ -706,7 +733,6 @@ def modify_rtdrif_in_mzxml(file_path, file_name, model):
 
     tree.write(newfile)
 
-
 def get_good_peaks(file, matches, stds_matches):
     good_peaks = 0
     for match in matches:
@@ -740,11 +766,12 @@ def get_total_stds(file, stds_matches):
     return total
 
 def get_peaks_for_files(output_dir, files, rt_window, xml_template, stds_matches):
-    MZMINE_COMMAND = '/Users/anamaria/Documents/git/MZmine-2.40.1/startMZmine_MacOSX.command'
 
     print(files)
     dict_peaks = {}
     dict_peaks[str(files)] = []
+
+
 
     for rt in rt_window:
         print(rt)
@@ -809,7 +836,6 @@ def plot_boxplots_individual_dataset(data, metab_id, name_column, ylim = (10,30)
         plt.ylim(ylim)
     plt.show()
 
-
 def mergeDict(dict1, dict2):
     ''' Merge dictionaries and keep values of common keys in list'''
     dict3 = {**dict1, **dict2}
@@ -818,7 +844,6 @@ def mergeDict(dict1, dict2):
             dict3[key] = [value , dict1[key]]
 
     return dict3
-
 
 def plot_spectra(score, rt_file1, rt_file2, spectrum_file1, spectrum_file2):
     print('Score:', score, 'RT1:', rt_file1, 'RT2:', rt_file2)
@@ -860,10 +885,10 @@ def get_bad_spectral_matches(mgf_file1, mgf_file2, rtdiff, tolerance, minmatch, 
     return badscores
 
 def remove_small_peaks(mgf_file, percentage):
-    import mnet
+
     for spectrum_id in mgf_file:
         spectrum = mgf_file[spectrum_id]
-        spectrum_max_int = spectrum.max_ms2_intensity
+        spectrum_max_int = max([intensity for mz,intensity in spectrum.peaks])
 
         threshold = percentage/100 * spectrum_max_int
         #threshold = number
@@ -878,7 +903,20 @@ def remove_small_peaks(mgf_file, percentage):
 
         spectrum.peaks = new_peaks
         spectrum.n_peaks = len(spectrum.peaks)
-        spectrum.normalised_peaks = mnet.sqrt_normalise(spectrum.peaks)
+        spectrum.normalised_peaks = sqrt_normalise(spectrum.peaks)
+
+def sqrt_normalise(peaks):
+    import math
+    temp = []
+    total = 0.0
+    for mz,intensity in peaks:
+        temp.append((mz,math.sqrt(intensity)))
+        total += intensity
+    norm_facc = math.sqrt(total)
+    normalised_peaks = []
+    for mz,intensity in temp:
+         normalised_peaks.append((mz,intensity/norm_facc))
+    return normalised_peaks
 
 def extract_peaksets_with_spectra_from_filt_dataset(aligner, dataid):
     peaksets = []
@@ -902,7 +940,6 @@ def extract_peaksets_with_spectra(peaksets):
             epeaksets.append(peakset)
     return epeaksets
 
-
 def extract_scores_pairs_for_dataset(peaksets, dataset1, dataset2):
     from scoring_functions import fast_cosine
     good_scores = {}
@@ -919,7 +956,6 @@ def extract_scores_pairs_for_dataset(peaksets, dataset1, dataset2):
         if len(actual_scores)>0:
             good_scores[(actual_mz, actual_rt)] = actual_scores
     return good_scores
-
 
 def get_bad_spectral_matches_for(mz, rtdiff, mgf_file1, mgf_file2, tolerance, minmatch):
     from scoring_functions import fast_cosine
@@ -1019,7 +1055,6 @@ def calculate_counts_bad_scores(bs, peaksets, score_threshold):
                 nonexistent+=1
     return higher, diffh, lower, diffl, nonexistent
 
-
 def get_number_of_pairs_with_no_bad_matches_attached(bs):
     z=0
     for i in bs:
@@ -1056,13 +1091,35 @@ def print_threshold(bs, peaksets):
 
 def get_ids_for_top_percent(dataframe, per):
     idlist = []
+
     for rowid,row in dataframe.iterrows():
+
         total_zero = 0
+        total = len(row)
         for i in range(len(row)):
-            if row[i] == 0.0:
+
+            if float(row[i]) == 0.0:
                 total_zero += 1
-        percentage = total_zero*100/len(row)
+
+        percentage = total_zero*100/total
         if percentage <= per:
+            idlist.append(rowid)
+    return np.array(idlist)
+
+def get_ids_for_zero(dataframe):
+    idlist = []
+
+    for rowid,row in dataframe.iterrows():
+
+        total_zero = 0
+        total = len(row)
+        for i in range(len(row)):
+
+            if float(row[i]) == 0.0:
+                total_zero += 1
+
+        percentage = total_zero*100/total
+        if percentage == 100:
             idlist.append(rowid)
     return np.array(idlist)
 

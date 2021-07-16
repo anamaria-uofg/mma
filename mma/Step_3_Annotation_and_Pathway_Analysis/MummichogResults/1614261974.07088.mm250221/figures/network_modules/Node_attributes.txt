@@ -1,0 +1,1 @@
+CPD_ID	CPD_NAME	mz_row_Statistic	From_mz_row	From_EmpiricalCompound
