@@ -41,7 +41,7 @@ def main():
 
     for i in range(datasets_number_option):
         datasets[i] = st.sidebar.file_uploader('Upload files containing SRM information for dataset '+str(i+1),
-                                                type = ['csv'], key = i,
+                                                type = ['csv'], key = i.to_bytes(2, byteorder='big'),
                                                 accept_multiple_files = True )
 
         srms[i] = []
