@@ -132,12 +132,12 @@ def main():
             st.dataframe(mdf.transpose())
 
             fig, ax = plt.subplots()
-            nice_fonts = {
-                "font.family": "serif",
-                "font.serif" : "Times New Roman"}
-            plt.rcParams.update(nice_fonts)
+            # nice_fonts = {
+            #     "font.family": "serif",
+            #     "font.serif" : "Times New Roman"}
+            # plt.rcParams.update(nice_fonts)
 
-            plt.rc('font', family='serif', size = 15)
+            plt.rc('font',  size = 15)
             plt.rc('xtick', labelsize=15)
             plt.rc('ytick', labelsize=15)
 
@@ -146,7 +146,7 @@ def main():
             final_model.plot_mean(color = '#000000',ax=ax, label = ('Mean'))
             final_model.plot_confidence(color = '#AFABAB', ax=ax, label = ('Confidence Interval'))
             final_model.plot_data(ax=ax, marker = '.')
-            plt.xlim(2,19.5)
+            # plt.xlim(2,19.5)
             plt.xlabel('Reference RT (min)')
             plt.ylabel('Drift RT (min)')
 
