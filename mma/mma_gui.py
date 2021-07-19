@@ -132,7 +132,7 @@ def main():
             st.dataframe(mdf.transpose())
 
             fig, ax = plt.subplots()
-            nice_fonts = {"text.usetex": True,
+            nice_fonts = {
                 "font.family": "serif",
                 "font.serif" : "Times New Roman"}
             plt.rcParams.update(nice_fonts)
