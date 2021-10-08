@@ -8,6 +8,7 @@ import glob
 import os
 import re
 import itertools
+import GPy
 
 import sys
 import mass_spec_utils
@@ -446,8 +447,21 @@ def create_bins_same_width(dataset, n_bins):
 
     return int(bin_length)
 
-def plot_gpr_bins_mz_range(n_bins,dataset1_string, dataset2_string, matches, optimization_restarts, zscore):
+def plot_gpr_bins_mz_range(n_bins,name,dataset1_string, dataset2_string, matches, optimization_restarts, zscore):
 
+    fig, ax = plt.subplots(figsize = (20,10))
+
+
+    nice_fonts = {"text.usetex": True,
+        "font.family": "serif",
+        "font.serif" : "Times New Roman"}
+    plt.rcParams.update(nice_fonts)
+
+    plt.rc('font', family='serif')
+    plt.rc('xtick', labelsize=19)
+    plt.rc('ytick', labelsize=19)
+
+    
     info1, info2 = get_stds_between_datasets(dataset1_string, dataset2_string, matches)
     info1.sort()
     info2.sort()
@@ -457,7 +471,7 @@ def plot_gpr_bins_mz_range(n_bins,dataset1_string, dataset2_string, matches, opt
     bins = create_bins_mz_range(info1, n_bins)
 
     colors = ['C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9']
-    fig, ax = plt.subplots(figsize=(20,10))
+   
 
     for i in range(n_bins):
         RT1 = []
@@ -480,12 +494,26 @@ def plot_gpr_bins_mz_range(n_bins,dataset1_string, dataset2_string, matches, opt
         model.plot_data(ax=ax)
 
 
-    plt.xlabel("RT(min)")
-    plt.ylabel("RT drift")
+    plt.xlabel("RT(min)", fontsize=20)
+    plt.ylabel("RT drift", fontsize=20)
     plt.xlim((2.5,22.5))
+    fig.savefig('/Users/anamaria/Desktop/thesis_images/mzbinplot'+name+'.pdf', dpi=300, bbox_inches='tight')
     plt.show()
 
-def plot_gpr_bins_same_width(n_bins, dataset1_string, dataset2_string, matches, optimization_restarts, zscore):
+def plot_gpr_bins_same_width(n_bins, name, dataset1_string, dataset2_string, matches, optimization_restarts, zscore):
+    
+    fig, ax = plt.subplots(figsize = (20,10))
+
+
+    nice_fonts = {"text.usetex": True,
+        "font.family": "serif",
+        "font.serif" : "Times New Roman"}
+    plt.rcParams.update(nice_fonts)
+
+    plt.rc('font', family='serif')
+    plt.rc('xtick', labelsize=19)
+    plt.rc('ytick', labelsize=19)
+
 
     info1, info2 = get_stds_between_datasets(dataset1_string, dataset2_string, matches)
     info1.sort()
@@ -496,7 +524,7 @@ def plot_gpr_bins_same_width(n_bins, dataset1_string, dataset2_string, matches, 
     bins_length = create_bins_same_width(info1, n_bins)
 
     colors = ['C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9','C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9' ]
-    fig, ax = plt.subplots(figsize=(20,10))
+    
 
     for f in range(n_bins):
 
@@ -521,9 +549,10 @@ def plot_gpr_bins_same_width(n_bins, dataset1_string, dataset2_string, matches, 
 
         #model.plot()
 
-    plt.xlabel("RT(min)")
-    plt.ylabel("RT drift")
+    plt.xlabel("RT(min)", fontsize=20)
+    plt.ylabel("RT drift", fontsize=20)
     plt.xlim((2.5,22.5))
+    fig.savefig('/Users/anamaria/Desktop/thesis_images/plot'+name+'.pdf', dpi=300, bbox_inches='tight')
     plt.show()
 
 def get_non_anomalies(dataset_1_rt, dataset_2_rt):
