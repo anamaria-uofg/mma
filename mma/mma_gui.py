@@ -88,6 +88,7 @@ def main():
         right_column.write('')
 
         drift_mean = np.mean(df['RT drift (min)'])
+        st.write(drift_mean)
         if drift_mean <30:
             st.write('The drift is quite minimal. Do you wish to continue with the anaysis?')
         else:
