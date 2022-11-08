@@ -2,18 +2,18 @@ import os
 import xml.etree.ElementTree
 
 class Adduct:
-    def __init__(self, mw, name, fragment, ms2specdata, metabolites_dict, ms2_files):
+    def __init__(self, mw, name, fragment, metabolites_dict):
 
         self.name = name
         self.fragment = fragment
         self.mw = mw
         self.hmdb = self.get_hmdb(metabolites_dict)
-        if self.hmdb:
-            self.score, self.ms2spec = self.get_score(ms2specdata, ms2_files, metabolites_dict)
-        else:
-            self.score, self.ms2spec = 0, ''
+        # if self.hmdb:
+        #     self.score, self.ms2spec = self.get_score(ms2specdata, ms2_files, metabolites_dict)
+        # else:
+        #     self.score, self.ms2spec = 0, ''
 
-    def get_hmdb(self, metabolites_dict, tolerance = 0.3):
+    def get_hmdb(self, metabolites_dict, tolerance = 0.1):
 
         for metabolite in metabolites_dict:
 
@@ -21,7 +21,7 @@ class Adduct:
             if  mmw != None:
                 if self.mw >= float(mmw) - tolerance and self.mw <= float(mmw) + tolerance:
 
-                    return metabolite
+                    return (self.name, metabolites_dict[metabolite][2])
 
     def get_score(self, ms2specdata, ms2_files, metabolites):
 
@@ -123,13 +123,19 @@ class Adduct:
 
 class AdductList:
 
-    def __init__(self, mz, ms2specdata, metabolites_dict, ms2_files, positive):
+    def __init__(self, mz, metabolites_dict, positive):
 
+
+        self.positive = positive
         self.adducts = []
-        adduct_list = self.compute_adducts(mz, positive)
+
+        adduct_list = self.compute_adducts(mz)
         for i in adduct_list:
-            adduct = Adduct(i[0], i[1], i[2], ms2specdata, metabolites_dict, ms2_files)
+            adduct = Adduct(i[0], i[1], i[2], metabolites_dict)
             self.adducts.append(adduct)
+
+    def add_ms2_files(ms2_files):
+        self.ms2_files = ms2_files
 
     def print_adducts(self):
         for adduct in self.adducts:
@@ -144,10 +150,10 @@ class AdductList:
                 final_adduct = adduct
         return final_adduct
 
-    def compute_adducts(self, mz, positive = True):
+    def compute_adducts(self, mz):
 
         PROTON = 1.00727646677
-        if positive:
+        if self.positive:
             addList = [(mz - PROTON, 'M+H[1+]', ''),
                  ((mz - PROTON)*2, 'M+2H[2+]', ''),
                  ((mz - PROTON)*3, 'M+3H[3+]', ''),
@@ -247,7 +253,7 @@ class PeakInfo:
 
         return tolerance
 
-    def add_std_match(self, standards_dict, metabolites_dict, ppm = 3, ppm_rt = 30, positive=True):
+    def add_std_match(self, standards_dict, ppm = 3, ppm_rt = 30, positive=True):
         import numpy as np
         PROTON = 1.00727646677
         std_annotations = []
@@ -299,8 +305,15 @@ class PeakInfo:
         self.adducts = AdductList.compute_adducts(self, self.mz, mode)
 
     def add_adducts(self, metabolites_dict, ms2_files, positive = True):
-        self.adducts = AdductList(self.mz, self.spectra, metabolites_dict, ms2_files, positive)
+        self.adducts = AdductList(self.mz, metabolites_dict, positive)
         self.best_ms2_match_adduct = self.adducts.get_adduct_with_best_score()
+
+    def add_hmdb(self, metabolites_dict, positive=True):
+        self.hmdb = []
+        self.adducts = AdductList(self.mz, metabolites_dict, positive)
+
+        for adduct in self.adducts.adducts:
+            self.hmdb.append(adduct.get_hmdb(metabolites_dict))
 
     def add_ms2_match(self, metabolites_dict, score_theshold = 0.1):
         if self.best_ms2_match_adduct:
@@ -353,7 +366,7 @@ class PeakInfo:
         fig, ax = plt.subplots()
 
 
-        nice_fonts = {"text.usetex": True,
+        nice_fonts = {
             "font.family": "serif",
             "font.serif" : "Times New Roman"}
         plt.rcParams.update(nice_fonts)
@@ -364,14 +377,18 @@ class PeakInfo:
 
 
 
-        light_blue = '#34BBE3'
+        light_green = '#a5f79c'
         light_red = '#E3688F'
-        pal = {'control': light_blue, 'infected': light_red}
+        light_blue = '#34BBE3'
 
+        pal = {'DMSO': light_green, 'JVX607': light_red, 'IID432': light_blue}
+
+        lighter_green = '#d1facd'
         lighter_red = '#FF75A3'
         lighter_blue = '#39D1FF'
-        face_pal = {'control': lighter_blue, 'infected': lighter_red}
-        hue_order = ['control', 'infected']
+
+        face_pal = {'DMSO': lighter_green, 'JVX607': lighter_red, 'IID432': lighter_blue}
+        hue_order = ['DMSO', 'JVX607', 'IID432']
 
         boxprops = {'edgecolor': 'k', 'linewidth': 2, 'alpha':.5}
         lineprops = {'color': 'k', 'linewidth': 2}
@@ -386,8 +403,8 @@ class PeakInfo:
 
         cid = str(self.cid)
 
-        ax = sns.boxplot(y=data[cid], x='Dataset',hue = 'Condition', data = data, fliersize=0, **boxplot_kwargs)
-        ax = sns.stripplot(y=data[cid], x='Dataset',hue = 'Condition', data = data, split=True, jitter=0.2, **stripplot_kwargs)
+        ax = sns.boxplot(y=[float(i) for i in data[cid]], x='CellType',hue = 'TreatmentType', data = data, fliersize=0, **boxplot_kwargs)
+        ax = sns.stripplot(y=[float(i) for i in data[cid]], x='CellType',hue = 'TreatmentType', data = data, split=True, jitter=0.2, **stripplot_kwargs)
         handles, labels = ax.get_legend_handles_labels()
         lgd = ax.legend(handles[0:2], labels[0:2], loc='best', fontsize='medium',
                handletextpad=0.5)

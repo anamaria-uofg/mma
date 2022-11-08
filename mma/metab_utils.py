@@ -21,9 +21,9 @@ osp = MAC
 #MNET_PATH = '/Users/anamaria/git/molnet/code/'
 #sys.path.append(MNET_PATH)
 
-sys.path.append('/Users/anamaria/git/pymzmine/')
-from mzmine import align, load_aligned_peaks, match_aligned_to_original
-MZMINE_COMMAND = '/Users/anamaria/git/MZmine-2.40.1/startMZmine_MacOSX.command'
+# sys.path.append('/Users/anamaria/git/pymzmine/')
+# # from mzmine import align, load_aligned_peaks, match_aligned_to_original
+# # MZMINE_COMMAND = '/Users/anamaria/git/MZmine-2.40.1/startMZmine_MacOSX.command'
 
 def calculate_tolerance(x, ppm):
     tolerance = x*ppm/1000000
@@ -54,18 +54,19 @@ def create_std_dict_by_mz(input_std_csv_file, polarity):
     for _,row in input_std_csv_file.iterrows():
         compound_name = row['Compound Name'].lower()
         detected_mz = row['Detected m/z']
-        expected_rt = row['Expected RT']
-        actual_rt = row['Actual RT']
-        polar = row['Polarity']
-        adduct_int = row['Adduct1 H+']
-        if polarity == 'both':
-            standards[detected_mz] = (compound_name, expected_rt*60, actual_rt*60, polar, adduct_int)
-        elif polarity == '+':
-            if polar == '+':
-                standards[detected_mz] = (compound_name, expected_rt*60, polar, adduct_int)
-        elif polarity == '-':
-            if polar == '-':
-                standards[detected_mz] = (compound_name, expected_rt*60, polar, adduct_int)
+        if detected_mz != 'N':
+            expected_rt = row['Expected RT']
+            actual_rt = row['Actual RT']
+            polar = row['Polarity']
+            adduct_int = row['Adduct1 H+']
+            if polarity == 'both':
+                standards[detected_mz] = (compound_name, expected_rt*60, actual_rt*60, polar, adduct_int)
+            elif polarity == '+':
+                if polar == '+':
+                    standards[detected_mz] = (compound_name, expected_rt*60, polar, adduct_int)
+            elif polarity == '-':
+                if polar == '-':
+                    standards[detected_mz] = (compound_name, expected_rt*60, polar, adduct_int)
     return standards
 
 def createMetaboliteSetList(original_files, output_dir, stds_csvs, original_csvs, rt_range = 0.5, mz_range = 0.0003):
@@ -461,7 +462,7 @@ def plot_gpr_bins_mz_range(n_bins,name,dataset1_string, dataset2_string, matches
     plt.rc('xtick', labelsize=19)
     plt.rc('ytick', labelsize=19)
 
-    
+
     info1, info2 = get_stds_between_datasets(dataset1_string, dataset2_string, matches)
     info1.sort()
     info2.sort()
@@ -471,7 +472,7 @@ def plot_gpr_bins_mz_range(n_bins,name,dataset1_string, dataset2_string, matches
     bins = create_bins_mz_range(info1, n_bins)
 
     colors = ['C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9']
-   
+
 
     for i in range(n_bins):
         RT1 = []
@@ -501,7 +502,7 @@ def plot_gpr_bins_mz_range(n_bins,name,dataset1_string, dataset2_string, matches
     plt.show()
 
 def plot_gpr_bins_same_width(n_bins, name, dataset1_string, dataset2_string, matches, optimization_restarts, zscore):
-    
+
     fig, ax = plt.subplots(figsize = (20,10))
 
 
@@ -524,7 +525,7 @@ def plot_gpr_bins_same_width(n_bins, name, dataset1_string, dataset2_string, mat
     bins_length = create_bins_same_width(info1, n_bins)
 
     colors = ['C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9','C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9' ]
-    
+
 
     for f in range(n_bins):
 
